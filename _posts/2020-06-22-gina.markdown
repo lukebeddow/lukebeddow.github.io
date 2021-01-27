@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "GINA: Wireless sensor platform"
-date:   2010-06-22 18:08:39 +00:00
+date:   2020-06-22 18:08:39 +00:00
 image: /images/gina-motes.jpg
 categories: UC
 course: " Berkeley"
