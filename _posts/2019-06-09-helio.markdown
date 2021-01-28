@@ -1,13 +1,12 @@
 ---
 layout: post
-title:  "Helio"
+title:  "Detection of carcinogenic weeds in aerial images using supervised learning"
 date:   2020-09-09 22:21:59 +00:00
 image: /images/plantbefore.png
 hoverimage: /images/plantafter.png
 categories: research
 author: "Dennis Hadjivelichkov"
 authors: "<strong>Denis Hadjivelichkov</strong>"
-venue: "BEng Dissertation"
+venue: "Bachelor Thesis"
 ---
-
-As part of my MSc Dissertation, improved the performance of a state-of-the-art method for mobile manipulator whole-body control by up to 24% in given custom environments. This was achieved by thorough investigation and simplification of the handcrafted reward signal used to optimize the system.
+Created a dataset containing carcinogenic weeds (Heliotropium Europaeum) in aerial imagery of farm fields. Applied and developed machine learning models for binary image classification. Developed image processing algorithm for localization of weeds within the images. Dealt with a limited data set and achieved a high recall rate.
