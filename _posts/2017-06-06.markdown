@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Autonomous Line-Following Buggy"
+date:   2017-06-06 18:08:39 +00:00
+image: /images/pietro.jpeg
+categories: University 
+course: "of Manchester"
+author: "Dennis Hadjivelichkov"
+authors: Denis Hadjivelichkov, Akbar Shah, Huiwen Lim, Eamon Walker
+---
+In 2017, I designed and developed an automous buggy as part of a four-member team. The buggy is able to follow a line and avoid obstacles such as walls, line gaps or slopes. The buggy implements a PID control system that corrects it's errors in line estimation in real time. The sensors used are an array of 6x digital light sensors and 1x ultrasonic sensor. The software is embedded in a PIC microcontroller. 
+
+The buggy was able to successfully complete a challenging track ('heats demo') with no issues. It was not the fastest buggy but we still managed to win a prize for best software documentation and we could finally sleep without worrying about the project! 
