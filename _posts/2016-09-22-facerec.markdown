@@ -3,8 +3,8 @@ layout: post
 title:  "Robust Mobile Face Recognition System"
 date:   2016-09-22 18:08:39 +00:00
 image: /images/mobile-facerec.jpg
-categories: UC
-course: " UoManchester"
+categories: 
+course: "University of Manchester"
 author: "Dennis Hadjivelichkov"
 ---
 In 2016, I worked as a summer intern with Dr. Hujun Yin at the University of Manchester. I developed a mobile video face detection and recognition system on a Raspberry Pi. The system is controlled via speech. It uses Viola-Jones and Eigenface methods for detection and recognition. It is able to actively re-learn and add new faces.
