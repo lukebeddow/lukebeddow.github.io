@@ -9,4 +9,4 @@ author: "Dennis Hadjivelichkov"
 authors: "<strong>Denis Hadjivelichkov</strong>"
 venue: "Bachelor Thesis"
 ---
-Created a dataset containing carcinogenic weeds (Heliotropium Europaeum) in aerial imagery of farm fields. Applied and developed machine learning models for binary image classification. Developed image processing algorithm for localization of weeds within the images. Dealt with a limited data set and achieved a high recall rate.
+Created a dataset containing carcinogenic weeds (Heliotropium Europaeum) in aerial imagery of farm fields. Applied and developed machine learning models for binary image classification. Developed an image processing algorithm for localization of weeds within the images. Dealt with a limited data and achieved a high recall rate.
