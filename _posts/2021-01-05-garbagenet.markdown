@@ -4,8 +4,8 @@ title:  "Garbage Collection and Sorting with a Mobile Manipulatorusing Deep Lear
 date:   2021-01-05 22:21:59 +00:00
 image: /images/garbagenet-detected.PNG
 categories: research
-author: "Jingyi Liu*,  Pietro Balatti*, Kirsty Ellis*, Denis Hadjivelichkov*, Danail Stoyanov, Arash Ajoudani, and Dimitrios Kanoulas"
-authors: "<strong>Denis Hadjivelichkov</strong>"
+authors: "Jingyi Liu*,  Pietro Balatti*, Kirsty Ellis*, Denis Hadjivelichkov*, Danail Stoyanov, Arash Ajoudani, and Dimitrios Kanoulas"
+author: "Jingyi Liu*,  Pietro Balatti*, Kirsty Ellis*, <strong>Denis Hadjivelichkov*</strong>, Danail Stoyanov, Arash Ajoudani, and Dimitrios Kanoulas"
 venue: "TBA"
 video: "https://www.youtube.com/watch?v=4JasCauS6hU"
 ---
