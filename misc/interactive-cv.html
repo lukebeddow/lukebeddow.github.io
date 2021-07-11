@@ -22,54 +22,7 @@
 
 </head>
 
-<style>
-.btn{
-  margin-bottom:10px;
-  
-  display:inline-block;
-  padding:6px 12px;
-  font-size:14px;
-  font-weight:400;
-  line-height:1.42857143;
-  text-align:center;
-  white-space:nowrap;
-  vertical-align:middle;
-  -ms-touch-action:manipulation;
-  touch-action:manipulation;
-  cursor:pointer;
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;
-  background-image:none;
-  border:1px solid transparent;
-  border-radius:9px
-}
-
-input[type=file]:focus,
-input[type=checkbox]:focus,
-input[type=radio]:focus{
-  outline:thin dotted;
-  outline:5px auto -webkit-focus-ring-color;
-  outline-offset:-2px
-}
-
-input{line-height:normal}
-
-input[type=checkbox],input[type=radio]{
-  -webkit-box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  box-sizing:border-box;
-  padding:0;
-}
-
-input[type=checkbox]:checked + label {
-  font-style: normal;
-  color: rgb(56,110,246);
-  border: 1px solid rgb(56,110,246);
-  background-color: rgb(226,233,253)
-}
-</style>
+<link href="interactive-cv.css" type="text/css" rel="stylesheet">
 
 
 <script type="text/javascript" 
@@ -99,8 +52,8 @@ function manage_topic_selection() {
 }
     
 function edit_topics_display(){
-	var x = document.getElementsByClassName("search-div")
-
+	var x = document.getElementsByClassName("search-div") 
+	
   for (var i = 0; i < x.length; i++){
     
     var x_i = x[i];
@@ -127,8 +80,6 @@ function edit_topics_display(){
   }
 }
 </script>
-
-
 
 <body>
   <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -210,18 +161,245 @@ for(var topic in tags_dict) {
 </script>
 
 <div class="topic_content_all">
-<ul class="search-div">
-  <li data-Al="">Owl</li>
-  <li data-Al="Al">Salmon</li>
-  <li data-Nas="Nas">Tarantula</li>
-</ul> 
 
-<ul class="search-div">
-  <li data-reinforcement="reinforcement">Owl</li>
-  <li data-reinforcement="1" data-robotics="1">Owl-R</li>
-  <li data-robotics="false">Salmon</li>
-  <li data-robotics="spider">Tarantula</li>
+<div id="section-research">
+Research:
+
+<div class="search-div">
+  <ul class="search-div-long">
+    <li data-ml="1" data-cv="1" data-ros="1" data-robotics='1'>
+      Project: Correspondences with Class Awareness
+    </li>
+    <li data-robotics="1" data-ml="1" data-ros="1">
+      Project: GarbageNet
+    </li>
+    <li data-rl="1" data-ml="1">
+      Masters Dissertation: Reinforcement Learning Whole-Body Control of a Mobile Manipulator
+    </li>
+    <li data-cv="1" data-ml="1">
+      Bachelor Thesis: Detecting Intrusive Weeds in Aerial Imagery
+    </li>
+  </ul> 
+</div>
+</div>
+
+
+<div id="work-experience">
+  Work Experience:
+  
+  <div class="search-div">
+    <ul class="search-div-long">
+    
+      <li data-robotics="1">
+        
+        <table  style="width:100%;border:0px;border-spacing:0px;
+        border-collapse:separate;margin-right:auto; margin-left:auto;">
+        <tr style="padding:0px">
+        <!-- LOGO PART -->
+        <td style="width:65px">
+        <img src="interactive-cv-img/ucl.png" 
+        height="auto" width="60px" style="border-radius:5">
+        </td>
+        <td style="width:auto; text-align:left; padding-left: 5px;">
+        Teaching Assistant (Robotics)
+        </td>
+        <td style="text-align: right;">2017 - 2018</td>
+        </tr></table>
+      </li>
+
+      <li data-engineering="1" data-cv="1">
+        
+        <table  style="width:100%;border:0px;border-spacing:0px;
+        border-collapse:separate;margin-right:auto; margin-left:auto;">
+        <tr style="padding:0px">
+        <!-- LOGO PART -->
+        <td style="width:65px">
+        <img src="interactive-cv-img/arm.png" 
+        height="auto" width="60px" style="border-radius:5">
+        </td>
+        <td style="width:auto; text-align:left; padding-left: 5px;">
+        Hardware Design and Verification (Vision)
+        </td>
+        <td style="text-align: right;">2017 - 2018</td>
+        </tr></table>
+      </li>
+    
+      <li data-engineering="1" data-cv="1">
+        
+        <table  style="width:100%;border:0px;border-spacing:0px;
+        border-collapse:separate;margin-right:auto; margin-left:auto;">
+        <tr style="padding:0px">
+        <!-- LOGO PART -->
+        <td style="width:65px">
+        <img src="interactive-cv-img/uom.jpg" 
+        height="auto" width="60px" style="border-radius:5">
+        </td>
+        <td style="width:auto; text-align:left; padding-left: 5px;">
+        Intern for Computer Vision (Vision)
+        </td>
+        <td  style="text-align: right;">2015 - 2015</td>
+        </tr></table>
+      </li>
+        
+    </ul> 
+  </div>
+  
+</div>
+
+<div id="uni-experience">
+  University Experience:
+  
+  <div class="search-div">
+    <ul class="search-div-elem">
+      <li data-ml="1" data-rl="1">
+        Graphical Models
+      </li>
+      <li data-ml="1">
+        Probabilistic Reasoning
+      </li>
+      <li data-ml="1">
+        Reinforcement Learning
+      </li>
+      <li data-ml="1" data-rl="1">
+        Multi-Agent Reinforcement Learning
+      </li>
+      <li data-robotics="1">
+        Control Systems
+      </li>
+      <li data-cv="1">
+        3D Geometry Processing
+      </li>
+      <li data-ros="1" data-robotics="1">
+        Robot Sensing and Manipulation
+      </li>
+      <li data-robotics="1">
+        Industrial Robotics
+      </li>
+      <li data-robotics="1">
+        Mechatronic Analysis 
+      </li>
+    </ul> 
+  </div>
+  
+  </div>
+
+
+<div id="section-sw">
+
+Software Stack:
+
+<div class="search-div">
+<ul class="search-div-elem">
+
+  
+  <li data-robotics=1 data-ros="1" data-libraries="1">
+    <table  style="width:100%;border:0px;border-spacing:0px;
+                  border-collapse:separate;margin-right:auto; margin-left:auto;">
+      <tr style="padding:0px">
+        <!-- LOGO PART -->
+        <td>
+          <img src="interactive-cv-img/ros.png" 
+               height="auto" width="40px" style="border-radius:5">
+        </td>
+        <td style="width:auto; text-align:left; padding-left: 5px;">
+          Move-It
+  </td></tr></table>
+  </li>
+
+  <li data-robotics=1 data-ros="1" data-libraries="1">
+    <table  style="width:100%;border:0px;border-spacing:0px;
+                  border-collapse:separate;margin-right:auto; margin-left:auto;">
+      <tr style="padding:0px">
+        <!-- LOGO PART -->
+        <td>
+          <img src="interactive-cv-img/ros.png" 
+               height="auto" width="40px" style="border-radius:5">
+        </td>
+        <td style="width:auto; text-align:left; padding-left: 5px;">
+          PCL
+  </td></tr></table>
+  </li>
+
+  <li data-robotics=1 data-ros="1" data-libraries="1">
+    <table  style="width:100%; border:0px;border-spacing:0px;
+                  border-collapse:separate;margin-right:auto; margin-left:auto;">
+      <tr style="padding:0px">
+        <!-- LOGO PART -->
+        <td>
+          <img src="interactive-cv-img/ros.png" 
+               height="auto" width="40px" style="border-radius:5">
+        </td>
+        <td style="width:auto; text-align:left; padding-left: 5px;">
+          Orocos-KDL
+  </td></tr></table>
+  </li>
+
+
+  <li data-ml=1 data-libraries="1">
+    <table  style="width:100%; border:0px;border-spacing:0px;
+                  border-collapse:separate;margin-right:auto; margin-left:auto;">
+      <tr style="padding:0px">
+        <!-- LOGO PART -->
+        <td style="width:auto; text-align:left; padding-left: 5px;">
+          Pytorch
+  </td></tr></table>
+  </li>
+  <li data-libraries="1">
+    <table  style="width:100%; border:0px;border-spacing:0px;
+                  border-collapse:separate;margin-right:auto; margin-left:auto;">
+      <tr style="padding:0px">
+        <!-- LOGO PART -->
+        <td style="width:auto; text-align:left; padding-left: 5px;">
+          NumPy
+  </td></tr></table>
+  </li>
+  <li data-cv=1 data-libraries="1">
+    <table  style="width:100%; border:0px;border-spacing:0px;
+                  border-collapse:separate;margin-right:auto; margin-left:auto;">
+      <tr style="padding:0px">
+        <!-- LOGO PART -->
+        <td style="width:auto; text-align:left; padding-left: 5px;">
+          OpenCV
+  </td></tr></table>
+  </li>
+  <li data-libraries="1">
+    <table  style="width:100%; border:0px;border-spacing:0px;
+                  border-collapse:separate;margin-right:auto; margin-left:auto;">
+      <tr style="padding:0px">
+        <!-- LOGO PART -->
+        <td style="width:auto; text-align:left; padding-left: 5px;">
+          Matplotlib
+  </td></tr></table>
+  </li>
+  
+  <li data-libraries="1">
+    <table  style="width:100%; border:0px;border-spacing:0px;
+                  border-collapse:separate;margin-right:auto; margin-left:auto;">
+      <tr style="padding:0px">
+        <!-- LOGO PART -->
+        <td style="width:auto; text-align:left; padding-left: 5px;">
+          SciPy
+  </td></tr></table>
+  </li>
+</ul>
+</div>
+
+</div>
+
+<div id="section-languages">
+Languages: 
+
+<div class="search-div">
+<ul class="search-div-elem">
+  <li data-libraries="1">Python</li>
+  <li data-libraries="1">MATLAB</li>
+  <li data-libraries="1">C++</li>
+  <li data-libraries="1">PHP</li>
 </ul> 
+</div>
+
+</div>
+
 </div>
 
     </td>
