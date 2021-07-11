@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <title>Dennis Hadjivelichkov</title>
+
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+  <meta name="author" content="Dennis Hadjivelichkov" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- base href="http://dennisushi.com/" -->
+  <link href="https://dennisushi.github.io/style.css" type="text/css" rel="stylesheet">
+    
+  <!--link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"-->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="shortcut icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+
+</head>
+
+<style>
+.btn{
+  margin-bottom:10px;
+  
+  display:inline-block;
+  padding:6px 12px;
+  font-size:14px;
+  font-weight:400;
+  line-height:1.42857143;
+  text-align:center;
+  white-space:nowrap;
+  vertical-align:middle;
+  -ms-touch-action:manipulation;
+  touch-action:manipulation;
+  cursor:pointer;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  background-image:none;
+  border:1px solid transparent;
+  border-radius:9px
+}
+
+input[type=file]:focus,
+input[type=checkbox]:focus,
+input[type=radio]:focus{
+  outline:thin dotted;
+  outline:5px auto -webkit-focus-ring-color;
+  outline-offset:-2px
+}
+
+input{line-height:normal}
+
+input[type=checkbox],input[type=radio]{
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  padding:0;
+}
+
+input[type=checkbox]:checked + label {
+  font-style: normal;
+  color: rgb(56,110,246);
+  border: 1px solid rgb(56,110,246);
+  background-color: rgb(226,233,253)
+}
+</style>
+
+
+
+<script type="text/javascript" 
+        src="interactive-cv-data.js">
+</script>
+
+<script type="text/javascript">
+var selected_topics = [];
+
+function manage_topic_selection() {
+  selected_topics = [];
+  var selectors = document.getElementsByClassName('topic_selector');
+  for (var i = 0; i < selectors.length; i++){
+    if (selectors[i].checked) {
+      var val = selectors[i].id;
+      if (val == "EVERYTHING"){
+        selected_topics = [val];
+        break;
+      } 
+      selected_topics.push(val);
+    } 
+  }
+  if (selected_topics.length == 0){
+  	selected_topics = ["EVERYTHING"]
+  }
+  edit_topics_display();
+}
+    
+function edit_topics_display(){
+	var x = document.getElementsByClassName("search-div")
+
+  for (var i = 0; i < x.length; i++){
+    
+    var x_i = x[i];
+    var list_items = x_i.getElementsByTagName("li");
+
+    for (var j = 0; j < list_items.length; j++){
+      var li_j = list_items[j]
+      
+      li_j.style.display = "none";
+      for (var k = 0; k < selected_topics.length; k++){
+      	tag = selected_topics[k];
+        if (tag == "EVERYTHING"){
+        	li_j.style.display = "";
+          break;
+        }
+        att = li_j.getAttribute(tag);
+        if ( att != null && att != "false"  && 
+          att != "False" && att != "0"){
+        	li_j.style.display = "";
+          break;
+        } 
+      }
+    }
+  }
+}
+</script>
+
+
+
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tr style="padding:0px">
+      <td style="padding:0px">
+
+
+<table style="width:100%;border:0px;
+              border-spacing:0px;
+              border-collapse:separate;
+              margin-right:auto;
+              margin-left:auto;">
+  <tr style="padding:0px">
+    <td style="padding:2.5%;width:60%;
+              vertical-align:middle;">
+      <h1>
+        Dennis Hadjivelichkov
+      </h1>
+      <p>
+        I am a PhD student at the 
+        <a href="https://www.ucl.ac.uk/ai-centre/">CDT for Foundational AI</a> at <a href="https://www.ucl.ac.uk/">UCL</a>, 
+        where I work on bridging the gap between robotics and intelligence through machine learning. I am part of the 
+        <a href="https://rpl-as-ucl.github.io/">Robot Perception and Learning Lab</a> 
+        where my PhD advisor is 
+        <a href="https://dkanou.github.io/">Dr. Dimitrios Kanoulas</a>.
+      </p>
+      <p style="text-align:center">
+        <a target="_blank" href="https://mailhide.io/e/fCvEsm2k"> Email</a> 
+        &nbsp;/&nbsp;
+        <a href="https://www.linkedin.com/in/denishadjivelichkov"> LinkedIn </a>
+      </p>
+    </td>
+    <td style="padding:2.5%;width:40%;max-width:40%">
+      <!--img style="width:100%;max-width:100%" alt="profile photo" src="images/circle_bw_crop.jpg"-->
+      <img src="images/dennis-selfie-crop.jpeg" height="auto" width="200" style="border-radius:50%">
+    </td>
+  </tr>
+</table>
+
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tr style="padding:0px">
+    <td style="padding:2.5%;width:60%;
+                vertical-align:middle;
+                text-align: left;">
+<p>    
+Select topic(s) of interest to see relevant projects, experience and publications:
+</p>
+
+<div class = "topic_selection_div">
+  <!--link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" /-->
+</div>
+
+
+<script>
+var element = document.getElementsByClassName("topic_selection_div")[0];
+
+for(var topic in tags_dict) {
+  var topic_attr_name = tags_dict[topic];
+	var tag_id = "data-"+topic_attr_name
+
+
+  var tag = document.createElement("input");
+  tag.type = "checkbox";
+  tag.classList.add("topic_selector");
+  tag.id = tag_id;
+  tag.style = "visibility:hidden;";
+  tag.setAttribute("onclick", "manage_topic_selection()");
+  element.appendChild(tag);
+  var tag_label = document.createElement("label");
+  tag_label.classList.add('btn');
+  tag_label.setAttribute("for", tag_id);
+  tag_label.setAttribute("style", "border:1px solid grey;");
+  var text = document.createTextNode(topic);
+  tag_label.appendChild(text);
+
+  element.appendChild(tag_label);	
+}
+</script>
+
+<div class="topic_content_all">
+<ul class="search-div">
+  <li data-Al="">Owl</li>
+  <li data-Al="Al">Salmon</li>
+  <li data-Nas="Nas">Tarantula</li>
+</ul> 
+
+<ul class="search-div">
+  <li data-reinforcement="reinforcement">Owl</li>
+  <li data-reinforcement="1" data-robotics="1">Owl-R</li>
+  <li data-robotics="false">Salmon</li>
+  <li data-robotics="spider">Tarantula</li>
+</ul> 
+</div>
+
+    </td>
+  </tr>
+</table>
+
+
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
