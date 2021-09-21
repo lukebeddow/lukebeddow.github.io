@@ -30,7 +30,11 @@ input[type=radio]:focus{
     outline-offset:-2px
 }
 
-input{line-height:normal}
+input{
+    line-height:normal;    
+    display: inline-block;
+    
+}
 
 input[type=checkbox],input[type=radio]{
     -webkit-box-sizing:border-box;
@@ -70,6 +74,17 @@ input[type=checkbox]:checked + label {
     width: 100%;
 }
 
+.search-div-long li:hover {
+    list-style-type: none;
+    border: 1px solid;
+    border-radius:9px;
+    padding : 10px;
+    margin : 5px;
+    width: 100%;
+    border: 1px solid rgb(56,110,246);
+    background-color: rgb(56,110,246);
+}
+
 
 .search-div-elem {
     width: 100%;
@@ -82,4 +97,10 @@ input[type=checkbox]:checked + label {
     padding : 10px;
     margin : 5px 0px 5px 0px;
     height: 20px;
+}
+
+.topic_selection_div{
+    display: inline-block;
+    text-align: left;
+    width: 80%;
 }

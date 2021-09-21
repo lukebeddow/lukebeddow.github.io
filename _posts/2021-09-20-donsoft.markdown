@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Fully Self-Supervised Class Awareness in Dense Object Descriptors"
+date:   2021-09-20 29:21:59 +00:00
+image: /images/garbagenet-detected.PNG
+categories: research
+authors: "<strong>Denis Hadjivelichkov*</strong>, Dimitrios Kanoulas"
+author: "<strong>Denis Hadjivelichkov*</strong>, Dimitrios Kanoulas"
+venue: "CoRL 2021"
+---
+
+DON+Soft Abstract.
