@@ -10,4 +10,4 @@ author: "<strong>Denis Hadjivelichkov*</strong>, Dimitrios Kanoulas"
 venue: "CoRL 2021"
 ---
 
-The method introduces learning of class-aware dense object descriptors by providing either unsupervised discrete labels or confidence in object similarities. We show that the introduced method outperforms previous techniques with more robust pixel-to-pixel matches in multi-object scenarios. An example robotic application is shown - grasping of objects in clutter based on corresponding points.
+The method introduces learning of class-aware dense object descriptors that outperforms previous techniques with more robust pixel-to-pixel matches in multi-object scenarios. An example robotic application is shown - grasping of objects in clutter based on corresponding points.
