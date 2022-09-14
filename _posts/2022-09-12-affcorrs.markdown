@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "One-Shot Transfer of Affordance Regions? AffCorrs!"
-date:   2022-09-14 20:21:59 +00:00
+date:   2022-09-12 20:21:59 +00:00
 image: /images/affcorrs.gif
 categories: research
 authors: "<strong>Denis Hadjivelichkov</strong>, Sicelukwanda Zwane, Marc Deisenroth, Lourdes Agapito, Dimitrios Kanoulas"

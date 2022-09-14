@@ -8,6 +8,8 @@ categories: research
 authors: "<strong>Denis Hadjivelichkov</strong>, Dimitrios Kanoulas"
 author: "<strong>Denis Hadjivelichkov</strong>, Dimitrios Kanoulas"
 venue: "CoRL 2021"
+video: "https://www.youtube.com/watch?v=vzdn1lVlNp0"
+paper: "https://arxiv.org/pdf/2110.01957.pdf"
 ---
 
 The method introduces learning of class-aware dense object descriptors that outperforms previous techniques with more robust pixel-to-pixel matches in multi-object scenarios. An example robotic application is shown - grasping of objects in clutter based on corresponding points.
