@@ -25,10 +25,10 @@
 
 
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tr style="padding:0px">
       <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table style="width:80%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr style="padding:0px">
             <td style="padding:2.5%;width:60%;vertical-align:middle">
               <h1>
@@ -57,7 +57,7 @@
           </tr>
         </table>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table style="width:80%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>Research</h2>
@@ -76,7 +76,7 @@
           {% for cat in post.categories %}
           {% if cat == 'research' %}
           <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+            <td style="padding:2%;width:44%;vertical-align:middle;min-width:120px">
               <div class="hoverdiv">
                 <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
                 {% if post.hoverimage %}
@@ -86,7 +86,7 @@
                 {% endif%}
               </div>
             </td>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
+            <td style="padding:2%;width:56%;vertical-align:middle">
               <h3>{{post.title}}</h3>
               <br>
               {{post.authors}}
@@ -125,7 +125,7 @@
         <br>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
+            <td style="padding:2%;width:100%;vertical-align:middle">
               <h2>Other Projects</h2>
               <p> These include coursework, side projects and unpublished research work. 
               </p>
@@ -138,10 +138,10 @@
           {% for cat in post.categories %}
           {% if cat != 'research' and cat != 'Intel' %}
           <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+            <td style="padding:2%;width:44%;vertical-align:middle;min-width:120px">
               <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
             </td>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
+            <td style="padding:2%;width:56%;vertical-align:middle">
               <h3>{{post.title}}</h3>
               <br>
               <em>{{post.categories}} {{post.course}}</em>
