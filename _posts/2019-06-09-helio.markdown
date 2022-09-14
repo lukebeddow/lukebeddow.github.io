@@ -2,7 +2,7 @@
 layout: post
 title:  "Detection of carcinogenic weeds in aerial images using supervised learning"
 date:   2019-06-09 22:21:59 +00:00
-image: /images/plantbefore.png
+image: /images/plantbefore-h.png
 hoverimage: /images/plantafter.png
 categories: research
 author: "Dennis Hadjivelichkov"

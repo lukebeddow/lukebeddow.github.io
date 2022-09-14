@@ -2,7 +2,7 @@
 layout: post
 title:  "Fully Self-Supervised Class Awareness in Dense Object Descriptors"
 date:   2021-09-20 20:21:59 +00:00
-image: /images/donsoft-1.png
+image: /images/donsoft-1-h.png
 hoverimage: /images/donsoft-2.png
 categories: research
 authors: "<strong>Denis Hadjivelichkov</strong>, Dimitrios Kanoulas"
