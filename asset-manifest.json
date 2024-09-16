@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/lukebeddow.github.io/static/css/main.9f216f00.css",
+    "main.js": "/lukebeddow.github.io/static/js/main.0d8dfca7.js",
+    "static/js/453.6c3f76f4.chunk.js": "/lukebeddow.github.io/static/js/453.6c3f76f4.chunk.js",
+    "index.html": "/lukebeddow.github.io/index.html",
+    "main.9f216f00.css.map": "/lukebeddow.github.io/static/css/main.9f216f00.css.map",
+    "main.0d8dfca7.js.map": "/lukebeddow.github.io/static/js/main.0d8dfca7.js.map",
+    "453.6c3f76f4.chunk.js.map": "/lukebeddow.github.io/static/js/453.6c3f76f4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f216f00.css",
+    "static/js/main.0d8dfca7.js"
+  ]
+}
