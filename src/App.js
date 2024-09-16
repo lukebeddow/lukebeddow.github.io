@@ -16,30 +16,24 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h2 class="fixed-name">Denis Hadjivelichkov</h2>
+        <h2 class="fixed-name">Luke Beddow</h2>
         <h1>About me</h1>
-        <img src={`${process.env.PUBLIC_URL}/images/profile-photo.jpg`} alt="Profile" className="profile-photo"/>
+        <img src={`${process.env.PUBLIC_URL}/images/profile-photo.png`} alt="Profile" className="profile-photo"/>
         <p>
-          I am a PhD student at 
-          the <a href="https://www.ucl.ac.uk/ai-centre/">CDT for Foundational AI</a>, <a href="https://www.ucl.ac.uk/">UCL</a>, 
-          where I work on bridging the gap between robotics 
-          and intelligence through machine learning. 
-          My recent interests include
-          semantic correspondences, 
-          world models, neural radiance fields, and imitation learning with diffusion.
-          I am part of 
+          I am a roboticist with expertise in machine learning, grasping, and hardware integration.
+          I have almost completed a PhD at <a href="https://www.ucl.ac.uk/">UCL</a> as part of
           the <a href="https://rpl-as-ucl.github.io/">Robot Perception and Learning Lab</a>.
         </p>
         <p>
-        <a href="https://www.linkedin.com/in/denishadjivelichkov/" target="_blank">
+        <a href="https://www.linkedin.com/in/luke-beddow-130264171/" target="_blank">
           LinkedIn
         </a>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="mailto:dennis.hvel@gmail.com" target="_blank">
+        <a href="mailto:lukebeddow@gmail.com" target="_blank">
           Email
         </a>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://scholar.google.com/citations?hl=en&user=pFSbKWMAAAAJ" target="_blank">
+        <a href="https://scholar.google.com/citations?user=Dx_CURwAAAAJ&hl=en&oi=ao" target="_blank">
           Scholar
         </a>
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -51,7 +45,7 @@ function App() {
       </header>
       <h1>Projects & Publications</h1>
       <h4>Full list of publications available on
-      &nbsp;<a href="https://scholar.google.com/citations?hl=en&user=pFSbKWMAAAAJ" target="_blank">
+      &nbsp;<a href="https://scholar.google.com/citations?user=Dx_CURwAAAAJ&hl=en&oi=ao" target="_blank">
         Google Scholar</a>
       </h4>
       <div className="Projects-container">

@@ -1,68 +1,73 @@
 [
   {
     "id": "project1",
-    "title": "ViT-A*: Legged Robot Path Planning using Vision Transformer A*",
+    "title": "Reinforcement Learning Grasping with Force Feedback from Modeling Compliant Fingers",
     "description": " Legged robot navigation through data-driven path planning, incorporating neural networks, differentiable planners, and Vision Transformers for efficient handling of varied terrains and obstacles, validated on real quadruped robots.",
-    "imageURL": "images/vita.png",
-    "authors": ["Jianwei Liu*", "Shirui Lyu*","Denis Hadjivelichkov", "Valerio Modugno", "Dimitrios Kanoulas"],
-    "venue": "Humanoids 2023",
-    "paperURL":"https://arxiv.org/pdf/2310.07525.pdf"
-  },
-  {
-    "id": "project1",
-    "title": "Safe Trajectory Sampling in Model-based Reinforcement Learning",
-    "description": "Enforcing safety constraints in model-based reinforcement learning, ensuring safe trajectories for real robots by integrating user-specified requirements and employing Gaussian processes to maintain complex predictive state distributions.",
-    "imageURL": "images/lim-z.png",
-    "authors": ["Sicelukwanda Zwane", "Denis Hadjivelichkov", "Yicheng Lui", "Yasemin Bekiroglu", "Dimitrios Kanoulas", "Marc P. Deisenroth"],
-    "venue": "CASE 2023",
-    "paperURL":"https://dkanou.github.io/publ/P44__Zwane_CASE_2023.pdf",
-    "projectURL":"https://www.sml-group.cc/blog/2023-safe-sampling/"
-  },
-  {
-    "id": "project1",
-    "title": "One-Shot Transfer of Affordance Regions? AffCorrs!",
-    "description": "Our model, AffCorrs, uses a single reference image with annotated affordance regions to segment semantically corresponding parts within a target scene. It leverages pre-trained DINO-ViT's image descriptors and cyclic correspondences, enabling both intra- and inter-class one-shot part segmentation.",
-    "imageURL": "images/affcorrs-2.gif",
-    "authors": ["Denis Hadjivelichkov", "Sicelukwanda Zwane", "Lourdes Agapito", "Marc P. Deisenroth", "Dimitrios Kanoulas"],
-    "venue": "CoRL 2022",
-    "paperURL":"https://arxiv.org/abs/2209.07147",
-    "projectURL":"https://sites.google.com/view/affcorrs",
-    "codeURL": "https://github.com/RPL-CS-UCL/UCL-AffCorrs"
+    "imageURL": "images/real grocery grasping.gif",
+    "authors": ["Luke Beddow", "Helge Wurdemann", "Dimitrios Kanoulas"],
+    "venue": "Transactions on Mechatronics 2024",
+    "paperURL":"https://discovery.ucl.ac.uk/id/eprint/10195552/1/RL%20Grasping%20final.pdf"
   },
   {
     "id": "project2",
-    "title": " Fully Self-Supervised Class Awareness in Dense Object Descriptors ",
-    "description": "The method introduces learning of class-aware dense object descriptors that outperforms previous techniques with more robust pixel-to-pixel matches in multi-object scenarios. An example robotic application is shown - grasping of objects in clutter based on corresponding points.",
-    "imageURL": "images/donsoft-1-h.png",
-    "hoverImageURL": "images/donsoft-2-h.png",
-    "authors": ["Denis Hadjivelichkov", "Dimitrios Kanoulas"],
-    "venue":"CoRL 2021",
-    "paperURL": "https://arxiv.org/pdf/2110.01957.pdf",
-    "videoURL": "https://www.youtube.com/watch?v=vzdn1lVlNp0"
+    "title": "Evaluating a Movable Palm using a Reinforcement Learning-base Approach",
+    "description": "Enforcing safety constraints in model-based reinforcement learning, ensuring safe trajectories for real robots by integrating user-specified requirements and employing Gaussian processes to maintain complex predictive state distributions.",
+    "imageURL": "images/Palm vs no palm.gif",
+    "authors": ["Luke Beddow", "Helge Wurdemann", "Dimitrios Kanoulas"],
+    "venue": "IROS 2024",
+    "paperURL":"https://discovery.ucl.ac.uk/id/eprint/10195712/1/Wurdemann_Evaluating%20palm%20final.pdf"
   },
   {
     "id": "project3",
-    "title": "Garbage Collection and Sorting with a Mobile Manipulator using Deep Learning and Whole-Body Control",
-    "description": "A deep neural network GarbageNet to detect different recyclable types of garbage in the wild, experimentally tested with a Whole-Body Controlled Mobile Manipulator.",
-    "imageURL": "images/garbagenet-detected.png",
-    "venue":"Humanoids 2021",
-    "authors": ["Jingyi Liu*", "Pietro Balatti*", "Kirsty Ellis*", "Denis Hadjivelichkov*", "Danail Stoyanov", "Arash Ajoudani", "Dimitrios Kanoulas"],
-    "paperURL": "https://www.researchgate.net/publication/351662241_Garbage_Collection_and_Sorting_with_a_Mobile_Manipulator_using_Deep_Learning_and_Whole-Body_Control",
-    "videoURL": "https://www.youtube.com/watch?v=4JasCauS6hU"
+    "title": "Reinforcement Learning for Grasping Codebase",
+    "description": "Our model, AffCorrs, uses a single reference image with annotated affordance regions to segment semantically corresponding parts within a target scene. It leverages pre-trained DINO-ViT's image descriptors and cyclic correspondences, enabling both intra- and inter-class one-shot part segmentation.",
+    "imageURL": "images/sim vs real grasping.gif",
+    "authors": ["Luke Beddow"],
+    "venue": "GitHub repository",
+    "codeURL": "https://github.com/RPL-CS-UCL/luke-gripper-mujoco"
   },
   {
     "id": "project4",
-    "title": "Handling Joint Limits in Mobile Manipulator Whole Body Control via Reinforcement Learning",
-    "venue":"MSc Dissertation 2020",
-    "description": "As part of my MSc Dissertation, improved the performance of a state-of-the-art method for mobile manipulator whole-body control by up to 24% in given custom environments. This was achieved by thorough investigation and simplification of the handcrafted reward signal used to optimize the system.",
-    "imageURL": "images/papers-wbc-diss.png"
+    "title": "RL-based Grasping via Affordance Localization and CLIP",
+    "description": "The method introduces learning of class-aware dense object descriptors that outperforms previous techniques with more robust pixel-to-pixel matches in multi-object scenarios. An example robotic application is shown - grasping of objects in clutter based on corresponding points.",
+    "imageURL": "images/sii24_video.gif",
+    "hoverImageURL": "images/sii24_video.gif",
+    "authors": ["Xiang Long*", "Luke Beddow*", "Denis Hadjivelichkov", "Helge Wurdemann", "Dimitrios Kanoulas"],
+    "venue":"SII24",
+    "paperURL": "https://discovery.ucl.ac.uk/id/eprint/10178561/1/sii_2024_xiang.pdf",
+    "videoURL": "https://www.youtube.com/watch?v=vzdn1lVlNp0"
   },
   {
     "id": "project5",
-    "title": "Detection of carcinogenic weeds in aerial images using supervised learning",
-    "venue":"Bachelor Thesis 2019",
+    "title": "A Caging-inspired Gripper using Flexible Fingers and a Movable Palm",
+    "description": "A deep neural network GarbageNet to detect different recyclable types of garbage in the wild, experimentally tested with a Whole-Body Controlled Mobile Manipulator.",
+    "imageURL": "images/IROS21_Luke_video.gif",
+    "venue":"IROS 2021",
+    "authors": ["Luke Beddow", "Helge Wurdemann", "Dimitrios Kanoulas"],
+    "paperURL": "https://discovery.ucl.ac.uk/id/eprint/10132628/1/a_caging_inspired_gripper.pdf",
+    "videoURL": "https://www.youtube.com/watch?v=4JasCauS6hU"
+  },
+  {
+    "id": "project6",
+    "title": "Flexure Couplings for Precision Control of Automated Robotic Mechanisms",
+    "venue":"MEng Dissertation 2020",
+    "description": "As part of my MSc Dissertation, improved the performance of a state-of-the-art method for mobile manipulator whole-body control by up to 24% in given custom environments. This was achieved by thorough investigation and simplification of the handcrafted reward signal used to optimize the system.",
+    "imageURL": "images/3-link-flexure.gif"
+  },
+  {
+    "id": "project7",
+    "title": "Programming a Chess Engine in C++ and Python",
+    "venue":"Personal Project",
     "description": "Created a dataset containing carcinogenic weeds (Heliotropium Europaeum) in aerial imagery of farm fields. Applied and developed machine learning models for binary image classification. Developed an image processing algorithm for localization of weeds within the images. Dealt with a limited data and achieved a high recall rate.",
-    "imageURL": "images/plantbefore-h.png",
-    "hoverImageURL": "images/plantafter.png"
+    "imageURL": "images/chess_board_demo.PNG",
+    "codeURL": "https://github.com/lukebeddow/chess"
+  },
+  {
+    "id": "project8",
+    "title": "Designing and Building 13 Different Puzzle Boxes",
+    "venue":"Personal Project",
+    "description": "Created a dataset containing carcinogenic weeds (Heliotropium Europaeum) in aerial imagery of farm fields. Applied and developed machine learning models for binary image classification. Developed an image processing algorithm for localization of weeds within the images. Dealt with a limited data and achieved a high recall rate.",
+    "imageURL": "images/puzzle box demo fast.gif",
+    "hoverImageURL": "images/puzzle box demo fast.gif"
   }
 ]
