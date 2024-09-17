@@ -15,6 +15,13 @@
   },
   {
     "id": 3,
+    "title": "MEng Mechanical Engineering",
+    "company": "University of Bath",
+    "duration": "2015 - 2020",
+    "description": ""
+  },
+  {
+    "id": 4,
     "title": "Research and Development Intern",
     "company": "Jacob Douwe Egberts",
     "duration": "2017 - 2018",

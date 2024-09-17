@@ -1,64 +1,67 @@
 [
   {
+    "id": "project0",
+    "title": "Learning-based Grasping of Grocery Items using Caging-inspired Gripper Design",
+    "description": "Developed reinforcement learning (RL) methods for grasping groceries. I designed and modelled a gripper, then trained models for grasping and deployed on real hardware.",
+    "imageURL": "images/limes-with-pics-5x-speed.gif",
+    "venue": "PhD Thesis 2024",
+    "codeURL": "https://github.com/lukebeddow/gripper-ros"
+  },
+  {
     "id": "project1",
     "title": "Reinforcement Learning Grasping with Force Feedback from Modeling Compliant Fingers",
-    "description": " Legged robot navigation through data-driven path planning, incorporating neural networks, differentiable planners, and Vision Transformers for efficient handling of varied terrains and obstacles, validated on real quadruped robots.",
+    "description": "Trained grasping in simulation with reinforcement learning, with 95.0% success rate on 42 grocery objects.",
     "imageURL": "images/real grocery grasping.gif",
     "authors": ["Luke Beddow", "Helge Wurdemann", "Dimitrios Kanoulas"],
     "venue": "Transactions on Mechatronics 2024",
-    "paperURL":"https://discovery.ucl.ac.uk/id/eprint/10195552/1/RL%20Grasping%20final.pdf"
+    "paperURL": "https://discovery.ucl.ac.uk/id/eprint/10195552/1/RL%20Grasping%20final.pdf",
+    "videoURL": "https://youtu.be/22BeCwBSNtQ",
+    "codeURL": "https://github.com/lukebeddow/gripper-mujoco"
   },
   {
     "id": "project2",
-    "title": "Evaluating a Movable Palm using a Reinforcement Learning-base Approach",
-    "description": "Enforcing safety constraints in model-based reinforcement learning, ensuring safe trajectories for real robots by integrating user-specified requirements and employing Gaussian processes to maintain complex predictive state distributions.",
-    "imageURL": "images/Palm vs no palm.gif",
+    "title": "Evaluating a Movable Palm using a Reinforcement Learning-based Approach",
+    "description": "Optimised and analysed design parameters by training a variety of grasping controllers.",
+    "imageURL": "images/sim vs real grasping.gif",
     "authors": ["Luke Beddow", "Helge Wurdemann", "Dimitrios Kanoulas"],
     "venue": "IROS 2024",
-    "paperURL":"https://discovery.ucl.ac.uk/id/eprint/10195712/1/Wurdemann_Evaluating%20palm%20final.pdf"
-  },
-  {
-    "id": "project3",
-    "title": "Reinforcement Learning for Grasping Codebase",
-    "description": "Our model, AffCorrs, uses a single reference image with annotated affordance regions to segment semantically corresponding parts within a target scene. It leverages pre-trained DINO-ViT's image descriptors and cyclic correspondences, enabling both intra- and inter-class one-shot part segmentation.",
-    "imageURL": "images/sim vs real grasping.gif",
-    "authors": ["Luke Beddow"],
-    "venue": "GitHub repository",
-    "codeURL": "https://github.com/RPL-CS-UCL/luke-gripper-mujoco"
+    "paperURL":"https://discovery.ucl.ac.uk/id/eprint/10195712/1/Wurdemann_Evaluating%20palm%20final.pdf",
+    "videoURL": "https://youtu.be/t_7xeef6NoY"
   },
   {
     "id": "project4",
-    "title": "RL-based Grasping via Affordance Localization and CLIP",
-    "description": "The method introduces learning of class-aware dense object descriptors that outperforms previous techniques with more robust pixel-to-pixel matches in multi-object scenarios. An example robotic application is shown - grasping of objects in clutter based on corresponding points.",
+    "title": "Reinforcement learning-based Grasping via Affordance Localization",
+    "description": "System integration of grasping, affordance localisation, and CLIP object identification.",
     "imageURL": "images/sii24_video.gif",
     "hoverImageURL": "images/sii24_video.gif",
-    "authors": ["Xiang Long*", "Luke Beddow*", "Denis Hadjivelichkov", "Helge Wurdemann", "Dimitrios Kanoulas"],
+    "authors": ["Xiang Long*", "Luke Beddow*", "Denis Hadjivelichkov", "AM Delfaki", "Helge Wurdemann", "Dimitrios Kanoulas"],
     "venue":"SII24",
     "paperURL": "https://discovery.ucl.ac.uk/id/eprint/10178561/1/sii_2024_xiang.pdf",
-    "videoURL": "https://www.youtube.com/watch?v=vzdn1lVlNp0"
+    "videoURL": "https://www.youtube.com/watch?v=75Ui5qAEqPg"
   },
   {
     "id": "project5",
     "title": "A Caging-inspired Gripper using Flexible Fingers and a Movable Palm",
-    "description": "A deep neural network GarbageNet to detect different recyclable types of garbage in the wild, experimentally tested with a Whole-Body Controlled Mobile Manipulator.",
+    "description": "Presented a novel gripper design and proof of concept for stable grasping.",
     "imageURL": "images/IROS21_Luke_video.gif",
     "venue":"IROS 2021",
     "authors": ["Luke Beddow", "Helge Wurdemann", "Dimitrios Kanoulas"],
     "paperURL": "https://discovery.ucl.ac.uk/id/eprint/10132628/1/a_caging_inspired_gripper.pdf",
-    "videoURL": "https://www.youtube.com/watch?v=4JasCauS6hU"
+    "videoURL": "https://www.youtube.com/watch?v=lXAwOyzO2qU",
+    "codeURL" : "https://github.com/lukebeddow/gripper-arduino"
   },
   {
     "id": "project6",
     "title": "Flexure Couplings for Precision Control of Automated Robotic Mechanisms",
     "venue":"MEng Dissertation 2020",
-    "description": "As part of my MSc Dissertation, improved the performance of a state-of-the-art method for mobile manipulator whole-body control by up to 24% in given custom environments. This was achieved by thorough investigation and simplification of the handcrafted reward signal used to optimize the system.",
+    "description": "Developed a mathematical model for a flexure robot, and modelled it in MATLAB using numerical techniques.",
     "imageURL": "images/3-link-flexure.gif"
   },
   {
     "id": "project7",
     "title": "Programming a Chess Engine in C++ and Python",
     "venue":"Personal Project",
-    "description": "Created a dataset containing carcinogenic weeds (Heliotropium Europaeum) in aerial imagery of farm fields. Applied and developed machine learning models for binary image classification. Developed an image processing algorithm for localization of weeds within the images. Dealt with a limited data and achieved a high recall rate.",
+    "description": "Developed a chess engine, first in Python, and then rewrote it in C++, to be compiled into Python.",
     "imageURL": "images/chess_board_demo.PNG",
     "codeURL": "https://github.com/lukebeddow/chess"
   },
@@ -66,7 +69,7 @@
     "id": "project8",
     "title": "Designing and Building 13 Different Puzzle Boxes",
     "venue":"Personal Project",
-    "description": "Created a dataset containing carcinogenic weeds (Heliotropium Europaeum) in aerial imagery of farm fields. Applied and developed machine learning models for binary image classification. Developed an image processing algorithm for localization of weeds within the images. Dealt with a limited data and achieved a high recall rate.",
+    "description": "Designed and built 13 puzzle boxes on my own using a 3D printer, which are all opened with different mechanisms. The gif shows the final section of the 50 move solution.",
     "imageURL": "images/puzzle box demo fast.gif",
     "hoverImageURL": "images/puzzle box demo fast.gif"
   }

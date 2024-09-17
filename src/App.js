@@ -25,8 +25,8 @@ function App() {
           the <a href="https://rpl-as-ucl.github.io/">Robot Perception and Learning Lab</a>.
         </p>
         <p>
-        <a href="https://www.linkedin.com/in/luke-beddow-130264171/" target="_blank">
-          LinkedIn
+        <a href="CV.pdf" target="_blank">
+        CV
         </a>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <a href="mailto:lukebeddow@gmail.com" target="_blank">
@@ -37,17 +37,20 @@ function App() {
           Scholar
         </a>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="CV.pdf" target="_blank">
-        CV
+        <a href="https://github.com/lukebeddow" target="_blank">
+          Github
         </a>
-        
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://www.linkedin.com/in/luke-beddow-130264171/" target="_blank">
+          LinkedIn
+        </a>
         </p>
       </header>
       <h1>Projects & Publications</h1>
-      <h4>Full list of publications available on
+      {/* <h4>Full list of publications available on
       &nbsp;<a href="https://scholar.google.com/citations?user=Dx_CURwAAAAJ&hl=en&oi=ao" target="_blank">
         Google Scholar</a>
-      </h4>
+      </h4> */}
       <div className="Projects-container">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
