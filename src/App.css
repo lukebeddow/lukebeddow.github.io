@@ -37,12 +37,11 @@ body, html {
 }
 
 .App-header {
-  background: linear-gradient(-45deg, 
-    /* #072b26,  */
-    /* #3a062d,  */
+  background: #fe850d;
+  /* background: linear-gradient(-45deg, 
     #ffbda3, 
     #f99a66
-    );
+    ); */
   background-size: 400% 400%;
   animation: gradientShift 7s ease infinite;
   padding: 30px;
@@ -67,8 +66,8 @@ body, html {
 }
 
 .App-header h2 {
-  color: #000000;
-  background:  #ffffff;
+  color: #ffffff;
+  background:  #000000;
 }
 
 .App-header a {
