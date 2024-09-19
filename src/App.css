@@ -37,7 +37,7 @@ body, html {
 }
 
 .App-header {
-  background: #fe850d;
+  background: #f09f4e;
   /* background: linear-gradient(-45deg, 
     #ffbda3, 
     #f99a66
@@ -127,7 +127,7 @@ body, html {
   border-bottom: 1px solid #ddd;
   display: block;
   width: 100%;
-  height: 36%; /* Will be the same as the .ProjectCard container */
+  height: 34%; /* Will be the same as the .ProjectCard container */
   object-fit: cover; /* Cover the container area */
   object-position: center top; /* Crop from the bottom */
   border-bottom: 1px solid #ddd;
