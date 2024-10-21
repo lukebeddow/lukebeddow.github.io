@@ -25,7 +25,7 @@ function App() {
           the <a href="https://rpl-as-ucl.github.io/">Robot Perception and Learning Lab</a>.
         </p>
         <p>
-        <a href="CV.pdf" target="_blank">
+        <a href="CV-Luke-Beddow.pdf" target="_blank">
         CV
         </a>
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -58,7 +58,7 @@ function App() {
       </div>
       <h1>Roles & Experience</h1>
       <h4>More detailed CV available
-      &nbsp;<a href="CV.pdf" target="_blank">
+      &nbsp;<a href="CV-Luke-Beddow.pdf" target="_blank">
         here</a>
       </h4>
       <ExperienceTimeline experiences={experiencesData}/>
