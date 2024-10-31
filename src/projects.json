@@ -2,7 +2,7 @@
   {
     "id": "project0",
     "title": "Learning-based Grasping of Grocery Items using Caging-inspired Gripper Design",
-    "description": "Developed reinforcement learning (RL) methods for grasping groceries. I designed and modelled a gripper, then trained models for grasping and deployed on real hardware.",
+    "description": "Developed machine learning methods for grasping groceries, and applied them extensively on real hardware, to achieve state of the art performance.",
     "imageURL": "images/limes-with-pics-5x-speed.gif",
     "venue": "PhD Thesis 2024",
     "codeURL": "https://github.com/lukebeddow/gripper-ros"
@@ -10,7 +10,7 @@
   {
     "id": "project1",
     "title": "Reinforcement Learning Grasping with Force Feedback from Modeling Compliant Fingers",
-    "description": "Trained grasping in simulation with reinforcement learning, with 95.0% success rate on 42 grocery objects.",
+    "description": "Trained grasping in simulation using reinforcement learning, with 95.0% success rate on 42 grocery objects.",
     "imageURL": "images/real grocery grasping.gif",
     "authors": ["Luke Beddow", "Helge Wurdemann", "Dimitrios Kanoulas"],
     "venue": "Transactions on Mechatronics 2024",
@@ -21,7 +21,7 @@
   {
     "id": "project2",
     "title": "Evaluating a Movable Palm using a Reinforcement Learning-based Approach",
-    "description": "Optimised and analysed design parameters by training a variety of grasping controllers.",
+    "description": "Learned and analysed optimal design parameters by training a variety of grasping controllers.",
     "imageURL": "images/sim vs real grasping.gif",
     "authors": ["Luke Beddow", "Helge Wurdemann", "Dimitrios Kanoulas"],
     "venue": "IROS 2024",

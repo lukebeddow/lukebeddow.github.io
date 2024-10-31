@@ -21,7 +21,7 @@ function App() {
         <img src={`${process.env.PUBLIC_URL}/images/profile-photo.png`} alt="Profile" className="profile-photo"/>
         <p>
           I am a roboticist with expertise in machine learning, grasping, and hardware integration.
-          I have almost completed a PhD at <a href="https://www.ucl.ac.uk/">UCL</a> as part of
+          I have submitted my PhD at <a href="https://www.ucl.ac.uk/">UCL</a> as part of
           the <a href="https://rpl-as-ucl.github.io/">Robot Perception and Learning Lab</a>.
         </p>
         <p>
