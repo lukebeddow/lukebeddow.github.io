@@ -59,10 +59,10 @@
   },
   {
     "id": "project7",
-    "title": "Programming a Chess Engine in C++ and Python",
+    "title": "Programming a Chess Engine using C++, Python, and learning",
     "venue":"Personal Project",
-    "description": "Developed a chess engine, first in Python, and then rewrote it in C++, to be compiled into Python.",
-    "imageURL": "images/chess_board_demo.PNG",
+    "description": "Developed a traditional chess engine capable of beating me in C++, to be compiled into Python. Then, I applied deep learning to optimise the evaluation function.",
+    "imageURL": "images/chess.gif",
     "codeURL": "https://github.com/lukebeddow/chess"
   },
   {
