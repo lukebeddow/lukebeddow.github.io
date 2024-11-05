@@ -22,6 +22,7 @@ function ProjectCard({ project }) {
       {project.videoURL && <a href={project.videoURL}>Video</a>}
       {project.paperURL && <a href={project.paperURL}>Paper</a>}
       {project.codeURL && <a href={project.codeURL}>Code</a>}
+      {project.evidencePDF && <a href={project.evidencePDF}>State of the Art Evidence</a>}
       </div>
     </div>
   );

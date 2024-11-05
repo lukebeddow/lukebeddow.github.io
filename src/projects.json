@@ -2,9 +2,10 @@
   {
     "id": "project0",
     "title": "Learning-based Grasping of Grocery Items using Caging-inspired Gripper Design",
-    "description": "Developed machine learning methods for grasping groceries, and applied them extensively on real hardware, to achieve state of the art performance.",
+    "description": "Developed machine learning methods for grasping groceries, and applied them extensively on real hardware. Achieved state of the art performance, 18% improvement on a bin picking benchmark by Ocado, 11% median grocery grasping improvement vs related work.",
     "imageURL": "images/limes-with-pics-5x-speed.gif",
     "venue": "PhD Thesis 2024",
+    "evidencePDF": "Comparison_vs_related_work.pdf",
     "codeURL": "https://github.com/lukebeddow/gripper-ros"
   },
   {
