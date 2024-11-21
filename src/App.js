@@ -20,9 +20,9 @@ function App() {
         <h1>About me</h1>
         <img src={`${process.env.PUBLIC_URL}/images/profile-photo.png`} alt="Profile" className="profile-photo"/>
         <p>
-          I am a roboticist with expertise in machine learning, grasping, and hardware integration.
-          I have submitted my PhD at <a href="https://www.ucl.ac.uk/">UCL</a> as part of
-          the <a href="https://rpl-as-ucl.github.io/">Robot Perception and Learning Lab</a>.
+          I have a PhD in machine learning applied to robotics, from <a href="https://www.ucl.ac.uk/">UCL</a> as part of
+          the <a href="https://rpl-as-ucl.github.io/">Robot Perception and Learning Lab</a>. I specialised in grasping,
+          manipulation, reinforcement learning, and practical deployment on real robots.
         </p>
         <p>
         <a href="CV-Luke-Beddow.pdf" target="_blank">
