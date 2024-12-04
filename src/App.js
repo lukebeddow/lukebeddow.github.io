@@ -25,9 +25,9 @@ function App() {
           manipulation, reinforcement learning, and practical deployment on real robots.
         </p>
         <p>
-        <a href="CV-Luke-Beddow.pdf" target="_blank">
+        {/* <a href="CV-Luke-Beddow.pdf" target="_blank">
         CV
-        </a>
+        </a> */}
         &nbsp;&nbsp;&nbsp;&nbsp;
         <a href="mailto:lukebeddow@gmail.com" target="_blank">
           Email
@@ -57,10 +57,10 @@ function App() {
         ))}
       </div>
       <h1>Roles & Experience</h1>
-      <h4>More detailed CV available
+      {/* <h4>More detailed CV available
       &nbsp;<a href="CV-Luke-Beddow.pdf" target="_blank">
         here</a>
-      </h4>
+      </h4> */}
       <ExperienceTimeline experiences={experiencesData}/>
     </div>
   );
