@@ -1,0 +1,27 @@
+# Who Luke is, in one place. Sources: Luke (2026-11-09), the CV (Overleaf, Nov 2026), the 2024 site.
+luke:
+  name: Luke Beddow
+  headline: Robotics researcher working on robot learning for reliable industrial automation.
+  description: Robotics researcher working on robot learning (imitation learning, reinforcement learning, VLAs) for reliable industrial automation. PhD, UCL.
+  photo: /media/profile-photo-480.webp
+  email: lukebeddow@gmail.com
+  links:
+    - { label: Google Scholar, url: "https://scholar.google.com/citations?user=Dx_CURwAAAAJ&hl=en" }
+    - { label: GitHub, url: "https://github.com/lukebeddow" }
+    - { label: LinkedIn, url: "https://www.linkedin.com/in/luke-beddow-130264171/" }
+  about:
+    - text: >-
+        I research robot learning for industrial applications such as factory automation, where the aim is
+        high reliability. At EGI I work on imitation learning and offline and online
+        reinforcement learning, with vision-language-action models (VLAs) and learned control policies.
+        It is a startup, so the role is varied: I also do a good deal of robotics engineering.
+      draft: true
+      note: Drafted from Luke's description of the EGI role (2026-11-09). Company full name and job title still to come.
+    - text: >-
+        Before EGI I was a Research Associate at Imperial College London, building world models for robot
+        control and deploying them on an underactuated crane robot and a quadruped. My PhD at
+        UCL's Robot Perception and Learning Lab developed reinforcement learning methods and a
+        caging-inspired gripper for grasping groceries, tested extensively on real hardware.
+      draft: true
+      note: Imperial facts from the CV; PhD wording from the 2024 site. Add the CoRL paper once its details are in.
+  updated: "2026-11"

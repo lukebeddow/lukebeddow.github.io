@@ -1,0 +1,33 @@
+# The large clips at the top of the page, in `order`. Keep two or three live items.
+# `wide: true` spans the full column; use it only for clips at least ~1000 px wide.
+- id: egi
+  order: 1
+  title: Current work at EGI
+  caption: Public company video, to be supplied by Luke.
+  wide: true
+  placeholder: true
+  note: Luke will supply a public EGI video (2026-11-09). Re-encode with scripts/media in the project unit.
+- id: corl
+  order: 2
+  title: CoRL paper (Imperial College London)
+  caption: First-author paper from the Imperial role; clip and details to come.
+  placeholder: true
+  note: Title, authors, year, links and a clip from Luke.
+- id: tmech
+  order: 3
+  title: Grasping real groceries with reinforcement learning
+  caption: Trained in simulation with force feedback from modelled compliant fingers; 95.0% success on 42 grocery items.
+  href: "#pub-tmech2024"
+  clip:
+    video: /media/real_grocery_grasping.mp4
+    poster: /media/real_grocery_grasping_poster.jpg
+    alt: A robot arm with a three-finger gripper picking up grocery items one after another.
+- id: iros2024
+  order: 4
+  title: Choosing gripper design with learned controllers
+  caption: 24 controllers trained across gripper designs to evaluate a movable palm, from simulation to the real robot.
+  href: "#pub-iros2024"
+  clip:
+    video: /media/sim_vs_real_grasping.mp4
+    poster: /media/sim_vs_real_grasping_poster.jpg
+    alt: Side-by-side simulated and real grasps with the same gripper.

@@ -1,0 +1,5 @@
+---
+// A visible gap for content still to come. Renders only in review mode.
+import { REVIEW } from '../lib/site';
+---
+{REVIEW && <span class="todo"><slot /></span>}

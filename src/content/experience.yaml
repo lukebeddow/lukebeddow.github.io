@@ -1,0 +1,47 @@
+# Roles and education, newest first by `start`. Dates: YYYY-MM (or YYYY); "present" for an ongoing role.
+# Sources: Luke (2026-11-09) for EGI and the Imperial end date; the CV for the rest.
+- id: egi
+  kind: role
+  org: EGI
+  start: "2026-03"
+  end: present
+  summary: Robot learning research for industrial automation (imitation learning, offline and online reinforcement learning, VLAs), and robotics engineering.
+  draft: true
+  placeholder: false
+  note: Job title and company full name and URL to come from Luke. Summary drafted from his description.
+- id: imperial
+  kind: role
+  title: Research Associate
+  org: Imperial College London
+  start: "2025-01"
+  end: "2026-03"
+  summary: World models for robot control, integrating physics knowledge for state prediction and anomaly detection; deployed on an underactuated crane robot and a quadruped; led a three-person team.
+- id: phd
+  kind: education
+  title: PhD in Computer Science
+  org: University College London, Robot Perception and Learning Lab
+  orgUrl: "https://rpl-as-ucl.github.io/"
+  start: "2020-10"
+  end: "2024-10"
+  summary: Reinforcement learning for robotic grasping, deployed on a 7-DOF arm with a custom gripper; three first-author papers.
+- id: pgta
+  kind: role
+  title: Postgraduate Teaching Assistant
+  org: University College London
+  start: "2021-01"
+  end: "2024-01"
+  summary: Taught on robotics MSc modules.
+- id: jde
+  kind: role
+  title: Research and Development Intern
+  org: Jacobs Douwe Egberts
+  start: "2017-07"
+  end: "2018-07"
+- id: meng
+  kind: education
+  title: MEng Mechanical Engineering, First Class
+  org: University of Bath
+  start: "2015"
+  end: "2020"
+  summary: Dissertation on flexure couplings for precision control of robotic mechanisms.
+  note: CV names the dissertation "Computational mathematical modelling of flexure robots"; the 2024 site "Flexure Couplings for Precision Control of Automated Robotic Mechanisms". Luke to pick.

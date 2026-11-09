@@ -1,0 +1,36 @@
+# Builds the site on every push; publishes it to GitHub Pages only from `main`.
+# Needs the repository's Pages source set to "GitHub Actions" (Settings > Pages) before the first deploy.
+name: Build and deploy
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      # Installs from package-lock.json, runs `npm run build` (type and schema checks, then astro build)
+      # on Node 24, and uploads dist/ as the Pages artifact.
+      - uses: withastro/action@v6
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

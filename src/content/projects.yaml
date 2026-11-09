@@ -1,0 +1,19 @@
+# Personal projects. Sources: the 2024 site.
+- id: puzzle-boxes
+  order: 1
+  title: Thirteen 3D-printed puzzle boxes
+  summary: Designed and built thirteen puzzle boxes, each opened by a different mechanism; the clip shows the end of a 50-move solution.
+  clip:
+    video: /media/puzzle_box_demo_fast.mp4
+    poster: /media/puzzle_box_demo_fast_poster.jpg
+    alt: Hands working through the last moves of a 3D-printed puzzle box.
+- id: chess
+  order: 2
+  title: A chess engine in C++ and Python
+  summary: A traditional engine, written in C++ and compiled into Python, that beats me; then a deep-learned evaluation function.
+  links:
+    - { label: code, url: "https://github.com/lukebeddow/chess" }
+  clip:
+    video: /media/chess.mp4
+    poster: /media/chess_poster.jpg
+    alt: The chess engine playing moves on a board.

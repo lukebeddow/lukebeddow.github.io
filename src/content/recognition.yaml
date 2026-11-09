@@ -1,0 +1,15 @@
+# Awards and service. Source: the CV.
+- id: reviewer
+  order: 1
+  text: Reviewer for IEEE Robotics and Automation Letters (RA-L), ICRA and IROS.
+- id: poster
+  order: 2
+  year: "2021"
+  text: Best Poster Award, UCL Robotics Workshop.
+- id: bath
+  order: 3
+  year: "2016–20"
+  text: BP Centurion Prize (2016) and academic commendations each year (2017–20), University of Bath.
+- id: outreach
+  order: 4
+  text: 'Volunteer lecture teaching robotics to schoolgirls, as part of “Bio-Robots: Crawl, Jump, and Slither!”' 

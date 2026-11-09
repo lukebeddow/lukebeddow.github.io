@@ -1,0 +1,95 @@
+# Titles exactly as published. DOIs from the CV; the SII 2024 title and DOI checked against UCL Discovery (2026-11-08).
+# "paper" links are the UCL Discovery author copies the 2024 site used.
+- id: corl
+  order: 1
+  title: CoRL paper title to come
+  authors: [Luke Beddow]
+  venue: Conference on Robot Learning (CoRL)
+  year: 2026
+  kind: conference
+  placeholder: true
+  note: Luke to supply title, full author list, year, links and a clip (2026-11-09). Year is a guess for layout only.
+- id: tmech2024
+  order: 2
+  title: Reinforcement Learning Grasping with Force Feedback from Modeling of Compliant Fingers
+  authors: [Luke Beddow, Helge Wurdemann, Dimitrios Kanoulas]
+  venue: IEEE/ASME Transactions on Mechatronics
+  year: 2024
+  kind: journal
+  doi: 10.1109/TMECH.2024.3450269
+  summary: Trained in simulation using a model of compliant fingers, then grasped 42 real grocery items with 95.0% success.
+  links:
+    - { label: paper, url: "https://discovery.ucl.ac.uk/id/eprint/10195552/1/RL%20Grasping%20final.pdf" }
+    - { label: video, url: "https://youtu.be/22BeCwBSNtQ" }
+    - { label: code, url: "https://github.com/lukebeddow/gripper-mujoco" }
+  clip:
+    video: /media/real_grocery_grasping.mp4
+    poster: /media/real_grocery_grasping_poster.jpg
+    alt: A robot arm with a three-finger gripper picking up grocery items.
+- id: iros2024
+  order: 3
+  title: Evaluating a Movable Palm in Caging Inspired Grasping using a Reinforcement Learning-based Approach
+  authors: [Luke Beddow, Helge Wurdemann, Dimitrios Kanoulas]
+  venue: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
+  year: 2024
+  kind: conference
+  doi: 10.1109/IROS58592.2024.10801702
+  summary: Trained 24 controllers across gripper designs to evaluate a movable palm, reaching 96.0% grasp reliability.
+  links:
+    - { label: paper, url: "https://discovery.ucl.ac.uk/id/eprint/10195712/1/Wurdemann_Evaluating%20palm%20final.pdf" }
+    - { label: video, url: "https://youtu.be/t_7xeef6NoY" }
+  clip:
+    video: /media/sim_vs_real_grasping.mp4
+    poster: /media/sim_vs_real_grasping_poster.jpg
+    alt: Simulated and real grasps side by side.
+- id: sii2024
+  order: 4
+  title: Reinforcement Learning-based Grasping via One-Shot Affordance Localization and Zero-Shot Contrastive Language–Image Learning
+  authors: [Xiang Long*, Luke Beddow*, Denis Hadjivelichkov, A. M. Delfaki, Helge Wurdemann, Dimitrios Kanoulas]
+  equalContribution: true
+  venue: IEEE/SICE International Symposium on System Integration (SII)
+  year: 2024
+  kind: conference
+  doi: 10.1109/SII58957.2024.10417178
+  summary: Combined a reinforcement learning grasping controller with one-shot affordance localisation and CLIP object identification.
+  links:
+    - { label: paper, url: "https://discovery.ucl.ac.uk/id/eprint/10178561/1/sii_2024_xiang.pdf" }
+    - { label: video, url: "https://www.youtube.com/watch?v=75Ui5qAEqPg" }
+  clip:
+    video: /media/sii24_video.mp4
+    poster: /media/sii24_video_poster.jpg
+    alt: The affordance localisation pipeline picking out an object to grasp.
+- id: iros2021
+  order: 5
+  title: A Caging Inspired Gripper using Flexible Fingers and a Movable Palm
+  authors: [Luke Beddow, Helge Wurdemann, Dimitrios Kanoulas]
+  venue: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
+  year: 2021
+  kind: conference
+  doi: 10.1109/IROS51168.2021.9635873
+  summary: A new gripper concept, built from scratch and shown in real-world tests to grasp robustly under disturbances.
+  links:
+    - { label: paper, url: "https://discovery.ucl.ac.uk/id/eprint/10132628/1/a_caging_inspired_gripper.pdf" }
+    - { label: video, url: "https://www.youtube.com/watch?v=lXAwOyzO2qU" }
+    - { label: code, url: "https://github.com/lukebeddow/gripper-arduino" }
+  clip:
+    video: /media/IROS21_Luke_video.mp4
+    poster: /media/IROS21_Luke_video_poster.jpg
+    alt: The caging gripper prototype lifting groceries in an experiment.
+- id: thesis2024
+  order: 6
+  title: Learning-based Grasping of Grocery Items using Caging-inspired Gripper Design
+  authors: [Luke Beddow]
+  venue: PhD thesis, University College London
+  year: 2024
+  kind: thesis
+  summary: 18% improvement on a bin-picking benchmark by Ocado; 11% median improvement over related work in grocery grasping.
+  links:
+    - { label: code, url: "https://github.com/lukebeddow/gripper-ros" }
+    - { label: comparison with related work, url: "/docs/comparison_vs_related_work.pdf" }
+  clip:
+    video: /media/limes-with-pics-5x-speed.mp4
+    poster: /media/limes-with-pics-5x-speed_poster.jpg
+    alt: The gripper picking limes from a bin, sped up five times.
+  draft: true
+  note: Numbers as on the 2024 site. The CV says "11% on average"; confirm mean or median. Title to check against the deposited thesis; add a thesis link if there is one.

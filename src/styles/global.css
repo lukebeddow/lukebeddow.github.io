@@ -1,0 +1,116 @@
+/* Design C, "Paper": a research homepage. A sticky sidebar for who and how to reach;
+   the main column reads like a well-set CV, with a band of large clips for the robot work. */
+:root {
+  --page: #ffffff;
+  --ink: #1f1f1f;
+  --muted: #5f5f5f;
+  --link: #1f4f9c;
+  --rule: #e4e4e4;
+  --mark: #fff6d6;
+  --clip-bg: #0d0d0d;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: #17181a; --ink: #e9e9e9; --muted: #a8a8a8; --link: #8fb4ff; --rule: #2c2d30; --mark: #3a3420;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; background: var(--page); color: var(--ink);
+  font: 400 18px/1.62 "Newsreader Variable", Georgia, "Times New Roman", serif;
+  font-optical-sizing: auto;
+  -webkit-text-size-adjust: 100%;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+.skip { position: absolute; left: -999px; top: 8px; background: var(--page); padding: 6px 10px; z-index: 10; }
+.skip:focus { left: 8px; }
+
+.layout { max-width: 1100px; margin: 0 auto; padding: 64px 32px; display: grid; grid-template-columns: 236px minmax(0, 1fr); gap: 64px; }
+
+/* Sidebar */
+aside { position: sticky; top: 48px; align-self: start; }
+aside .photo { width: 168px; height: 168px; object-fit: cover; border-radius: 50%; display: block; margin-bottom: 20px; }
+aside h1 { font-size: 30px; line-height: 1.1; font-weight: 600; margin: 0 0 10px; letter-spacing: -0.01em; }
+aside .headline { color: var(--muted); margin: 0 0 8px; font-size: 17px; line-height: 1.45; }
+aside .now { margin: 0 0 20px; font-size: 17px; line-height: 1.45; }
+aside ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 3px; font-size: 17px; }
+aside nav { margin-top: 28px; padding-top: 14px; border-top: 1px solid var(--rule); }
+aside nav ul { font-size: 16px; }
+aside nav a { color: var(--muted); }
+aside nav a:hover { color: var(--link); }
+
+/* Sections */
+h2 { font-size: 24px; font-weight: 600; margin: 52px 0 18px; padding-bottom: 6px; border-bottom: 1px solid var(--rule); }
+main > section:first-child h2 { margin-top: 0; }
+.about p { margin: 0 0 14px; max-width: 66ch; }
+
+/* Clips: muted loops that play only while on screen (see the script in Base.astro). */
+.clip { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; border-radius: 3px; background: var(--clip-bg); cursor: pointer; }
+.clip-wrap { position: relative; }
+.clip-wrap .state { position: absolute; right: 8px; bottom: 8px; font: 600 12px/1 system-ui, sans-serif; color: #fff; background: rgb(0 0 0 / 0.55); padding: 4px 7px; border-radius: 3px; opacity: 0; transition: opacity .2s; pointer-events: none; }
+.clip-wrap.paused .state { opacity: 1; }
+
+/* Featured band */
+.featured-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.featured-head h2 { flex: 1; }
+.motion-toggle { font: inherit; font-size: 15px; color: var(--link); background: none; border: 0; padding: 0; cursor: pointer; white-space: nowrap; }
+.featured { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 24px; }
+.featured .card.wide { grid-column: 1 / -1; }
+.featured h3 { font-size: 18px; line-height: 1.35; font-weight: 600; margin: 10px 0 2px; }
+.featured p { margin: 0; font-size: 16px; color: var(--muted); line-height: 1.5; }
+.slot { aspect-ratio: 16 / 9; border: 1px dashed var(--muted); border-radius: 3px; background: var(--mark); display: grid; place-items: center; color: var(--muted); font-size: 15px; padding: 12px; text-align: center; }
+
+/* Publications and projects: thumbnail and citation, the format reviewers already know how to scan. */
+.entry { display: grid; grid-template-columns: 208px minmax(0, 1fr); gap: 22px; padding: 14px 0; }
+.entry h3 { font-size: 18px; line-height: 1.35; font-weight: 600; margin: 0 0 4px; }
+.entry .who { margin: 0; color: var(--muted); font-size: 16px; }
+.entry .who b { color: var(--ink); font-weight: 600; }
+.entry .where { margin: 0 0 6px; font-style: italic; font-size: 16px; }
+.entry .what { margin: 0 0 6px; font-size: 16px; }
+.entry .links { font-size: 16px; margin: 0; }
+.entry .links a + a::before { content: "·"; color: var(--muted); display: inline-block; margin: 0 .45em; text-decoration: none; }
+.entry .note { font-size: 14px; color: var(--muted); margin: 4px 0 0; }
+.entry:target { background: var(--mark); outline: 8px solid var(--mark); }
+
+/* Experience and education */
+.cv { margin: 0; display: grid; grid-template-columns: 8.5ch 1fr; gap: 12px 20px; }
+.cv dt { color: var(--muted); font-variant-numeric: tabular-nums oldstyle-nums; white-space: nowrap; }
+.cv dd { margin: 0; }
+.cv .sub { display: block; color: var(--muted); font-size: 16px; line-height: 1.5; }
+.list { margin: 0; padding-left: 1.1em; }
+.list li { margin-bottom: 4px; }
+.list .yr { color: var(--muted); font-variant-numeric: oldstyle-nums; }
+
+footer { margin-top: 56px; padding-top: 14px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 15px; }
+
+/* Review mode only (npm run dev): unfinished content */
+.todo { background: var(--mark); outline: 1px dashed var(--muted); padding: 0 3px; }
+.draft { box-shadow: inset 3px 0 0 #d9a400; padding-left: 8px; }
+.review-banner { background: var(--mark); border-bottom: 1px dashed var(--muted); font: 14px/1.4 system-ui, sans-serif; padding: 8px 16px; text-align: center; }
+
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; gap: 32px; padding: 32px 20px 48px; }
+  aside { position: static; display: grid; grid-template-columns: 96px 1fr; gap: 4px 18px; align-items: center; }
+  aside .photo { width: 96px; height: 96px; margin: 0; grid-row: span 3; }
+  aside h1 { font-size: 26px; margin: 0; }
+  aside .headline, aside .now { margin: 0; font-size: 16px; }
+  aside .contact { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 12px; }
+  aside nav { display: none; }
+  .entry { grid-template-columns: 1fr; gap: 10px; }
+  .cv { grid-template-columns: 1fr; gap: 0; }
+  .cv dd { margin-bottom: 14px; }
+}
+@media (max-width: 560px) {
+  .featured { grid-template-columns: 1fr; }
+}
+
+.cv dd b { font-weight: 600; }
+.clip-note { margin: 14px 0 0; font-size: 15px; color: var(--muted); }
+.featured figure { margin: 0; }
+.entry > .clip-wrap, .entry > .slot { align-self: start; }

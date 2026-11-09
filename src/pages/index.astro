@@ -1,0 +1,126 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Clip from '../components/Clip.astro';
+import Entry from '../components/Entry.astro';
+import Todo from '../components/Todo.astro';
+import { REVIEW, shown, yearSpan, monthYear } from '../lib/site';
+
+const profile = (await getEntry('profile', 'luke'))!.data;
+const byOrder = <T extends { data: { order: number } }>(a: T, b: T) => a.data.order - b.data.order;
+
+const featured = (await getCollection('featured')).filter(shown).sort(byOrder);
+const publications = (await getCollection('publications')).filter(shown).sort(byOrder);
+const projects = (await getCollection('projects')).filter(shown).sort(byOrder);
+const recognition = (await getCollection('recognition')).filter(shown).sort(byOrder);
+// Newest first; an ongoing role sorts above everything.
+const experience = (await getCollection('experience'))
+  .filter(shown)
+  .sort((a, b) => (b.data.end === 'present' ? '9999' : b.data.start).localeCompare(a.data.end === 'present' ? '9999' : a.data.start));
+const now = experience.find((e) => e.data.kind === 'role' && e.data.end === 'present');
+
+const title = `${profile.name}: robot learning researcher`;
+const sections = [
+  ['about', 'About'],
+  ['work', 'Selected work'],
+  ['publications', 'Publications'],
+  ['projects', 'Projects'],
+  ['experience', 'Experience and education'],
+  ['recognition', 'Recognition and service'],
+];
+---
+<Base title={title} description={profile.description}>
+  <div class="layout">
+    <aside>
+      <img class="photo" src={profile.photo} alt={`Portrait of ${profile.name}`} width="168" height="168" />
+      <h1>{profile.name}</h1>
+      <p class="headline">{profile.headline}</p>
+      {now && (
+        <p class:list={['now', { draft: REVIEW && now.data.draft }]}>
+          {now.data.title ? <>{now.data.title}, {now.data.org}</> : <>Now at {now.data.org} <Todo>job title</Todo></>}
+        </p>
+      )}
+      <ul class="contact">
+        <li><a href={`mailto:${profile.email}`}>Email</a></li>
+        {profile.links.map((l) => <li><a href={l.url} target="_blank" rel="noopener me">{l.label}</a></li>)}
+      </ul>
+      <nav aria-label="Sections">
+        <ul>{sections.map(([id, name]) => <li><a href={`#${id}`}>{name}</a></li>)}</ul>
+      </nav>
+    </aside>
+
+    <main id="main">
+      <section class="about" id="about">
+        <h2>About</h2>
+        {profile.about.filter((p) => REVIEW || !p.placeholder).map((p) => (
+          <p class:list={{ draft: REVIEW && p.draft }}>{p.text}</p>
+        ))}
+      </section>
+
+      <section id="work">
+        <div class="featured-head">
+          <h2>Selected work</h2>
+        </div>
+        <div class="featured">
+          {featured.map(({ data: f }) => (
+            <figure class:list={["card", { wide: f.wide, draft: REVIEW && f.draft }]}>
+              {f.clip ? <Clip clip={f.clip} /> : <div class="slot">{f.caption}</div>}
+              <figcaption>
+                <h3>{f.href ? <a href={f.href}>{f.title}</a> : f.placeholder ? <Todo>{f.title}</Todo> : f.title}</h3>
+                {f.clip && <p>{f.caption}</p>}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        <p class="clip-note">
+          Clips are silent and loop while on screen. <button class="motion-toggle" type="button" data-motion-toggle aria-pressed="false">Pause clips</button>
+        </p>
+      </section>
+
+      <section id="publications">
+        <h2>Publications</h2>
+        {publications.map(({ id, data: p }) => (
+          <Entry id={id} title={p.title} clip={p.clip} authors={p.authors} equalContribution={p.equalContribution}
+            venue={p.venue} year={p.year} doi={p.doi} summary={p.summary} links={p.links}
+            draft={p.draft} placeholder={p.placeholder} />
+        ))}
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        {projects.map(({ id, data: p }) => (
+          <Entry id={id} title={p.title} clip={p.clip} summary={p.summary} links={p.links} draft={p.draft} placeholder={p.placeholder} />
+        ))}
+      </section>
+
+      <section id="experience">
+        <h2>Experience and education</h2>
+        <dl class="cv">
+          {experience.map(({ data: e }) => (
+            <>
+              <dt>{yearSpan(e.start, e.end)}</dt>
+              <dd class:list={{ draft: REVIEW && e.draft }}>
+                {e.title ? <><b>{e.title}</b>, </> : <><Todo>job title</Todo> </>}
+                {e.orgUrl ? <a href={e.orgUrl} target="_blank" rel="noopener">{e.org}</a> : e.org}
+                {e.summary && <span class="sub">{e.summary}</span>}
+              </dd>
+            </>
+          ))}
+        </dl>
+      </section>
+
+      <section id="recognition">
+        <h2>Recognition and service</h2>
+        <ul class="list">
+          {recognition.map(({ data: r }) => (
+            <li>{r.year && <span class="yr">{r.year}: </span>}{r.text}</li>
+          ))}
+        </ul>
+      </section>
+
+      <footer>
+        Updated {monthYear(profile.updated)}. <a href="https://github.com/lukebeddow/lukebeddow.github.io" target="_blank" rel="noopener">Source</a>.
+      </footer>
+    </main>
+  </div>
+</Base>

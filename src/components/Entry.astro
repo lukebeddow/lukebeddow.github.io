@@ -1,0 +1,51 @@
+---
+// A publication or project: clip on the left, citation on the right.
+import Clip from './Clip.astro';
+import Todo from './Todo.astro';
+import { REVIEW } from '../lib/site';
+
+interface Props {
+  id: string;
+  title: string;
+  clip?: { video: string; poster: string; alt: string } | undefined;
+  authors?: string[];
+  equalContribution?: boolean;
+  venue?: string;
+  year?: number;
+  doi?: string | undefined;
+  summary?: string | undefined;
+  links?: { label: string; url: string }[];
+  draft?: boolean;
+  placeholder?: boolean;
+}
+const p = Astro.props;
+const self = 'Luke Beddow';
+const links = [...(p.links ?? [])];
+if (p.doi) links.splice(1, 0, { label: 'doi', url: `https://doi.org/${p.doi}` });
+const external = (url: string) => /^https?:/.test(url);
+---
+<article class:list={['entry', { draft: REVIEW && p.draft }]} id={`pub-${p.id}`}>
+  {p.clip ? <Clip clip={p.clip} /> : <div class="slot">{REVIEW ? "clip to come" : ""}</div>}
+  <div>
+    <h3>{p.placeholder ? <Todo>{p.title}</Todo> : p.title}</h3>
+    {p.authors && (
+      <p class="who">
+        {p.authors.map((a, i) => (
+          <>
+            {a.replace('*', '') === self ? <b>{a}</b> : a}
+            {i < p.authors!.length - 1 ? ', ' : ''}
+          </>
+        ))}
+      </p>
+    )}
+    {p.venue && <p class="where">{p.venue}{p.year ? `, ${p.year}` : ''}{p.equalContribution ? '. *Equal contribution.' : ''}</p>}
+    {p.summary && <p class="what">{p.summary}</p>}
+    {links.length > 0 && (
+      <p class="links">
+        {links.map((l) => (
+          <a href={l.url} {...(external(l.url) ? { target: '_blank', rel: 'noopener' } : {})}>{l.label}</a>
+        ))}
+      </p>
+    )}
+  </div>
+</article>

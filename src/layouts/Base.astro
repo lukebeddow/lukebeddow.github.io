@@ -1,0 +1,130 @@
+---
+// Page shell: <head> metadata for search and link previews, fonts, styles, and the clip controller.
+import '@fontsource-variable/newsreader/opsz.css';
+import '@fontsource-variable/newsreader/opsz-italic.css';
+import '../styles/global.css';
+import { getEntry, getCollection } from 'astro:content';
+import { REVIEW, GOATCOUNTER_CODE } from '../lib/site';
+
+interface Props {
+  title: string;
+  description: string;
+  noindex?: boolean;
+}
+const { title, description, noindex = false } = Astro.props;
+const profile = (await getEntry('profile', 'luke'))!.data;
+const site = Astro.site!;
+const canonical = new URL(Astro.url.pathname, site).href;
+const ogImage = new URL('/og.jpg', site).href;
+
+const current = (await getCollection('experience')).find((e) => e.data.end === 'present' && e.data.kind === 'role');
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: profile.name,
+  url: site.href,
+  image: new URL(profile.photo, site).href,
+  description: profile.description,
+  email: `mailto:${profile.email}`,
+  sameAs: profile.links.map((l) => l.url),
+  ...(current ? { worksFor: { '@type': 'Organization', name: current.data.org } } : {}),
+  alumniOf: [
+    { '@type': 'CollegeOrUniversity', name: 'University College London' },
+    { '@type': 'CollegeOrUniversity', name: 'University of Bath' },
+  ],
+  knowsAbout: ['Robot learning', 'Reinforcement learning', 'Imitation learning', 'Robotic grasping', 'Vision-language-action models'],
+};
+---
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  {noindex && <meta name="robots" content="noindex" />}
+  <meta name="author" content={profile.name} />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#17181a" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="sitemap" href="/sitemap-index.xml" />
+
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content={profile.name} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content={`${profile.name}: ${profile.headline}`} />
+  <meta property="profile:first_name" content="Luke" />
+  <meta property="profile:last_name" content="Beddow" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json" set:html={JSON.stringify(person)} />
+  {GOATCOUNTER_CODE && !REVIEW && (
+    <script is:inline data-goatcounter={`https://${GOATCOUNTER_CODE}.goatcounter.com/count`} async src="//gc.zgo.at/count.js"></script>
+  )}
+</head>
+<body>
+  {REVIEW && (
+    <div class="review-banner">
+      Review build: dashed boxes are content still to come; a yellow bar marks drafted wording to approve. Neither appears in a normal build.
+    </div>
+  )}
+  <a class="skip" href="#main">Skip to content</a>
+  <slot />
+  <script>
+    // Clips play only while at least a quarter is on screen, never for reduced motion,
+    // and the visitor can pause one (click, Enter or Space) or all (the "Pause clips" button).
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let allPaused = reduce;
+    try { if (localStorage.getItem('clips') === 'paused') allPaused = true; } catch {}
+    const onScreen = new Set<HTMLVideoElement>();
+    const clips = Array.from(document.querySelectorAll<HTMLVideoElement>('video.clip'));
+
+    const wants = (v: HTMLVideoElement) => {
+      const o = v.dataset.override;
+      return o === 'play' || (o !== 'pause' && !allPaused);
+    };
+    const sync = (v: HTMLVideoElement) => {
+      const play = onScreen.has(v) && wants(v);
+      if (play) v.play().catch(() => {}); else v.pause();
+      v.parentElement?.classList.toggle('paused', !wants(v));
+    };
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        const v = e.target as HTMLVideoElement;
+        if (e.isIntersecting) onScreen.add(v); else onScreen.delete(v);
+        sync(v);
+      }
+    }, { threshold: 0.25 });
+
+    for (const v of clips) {
+      io.observe(v);
+      const toggle = () => { v.dataset.override = wants(v) ? 'pause' : 'play'; sync(v); };
+      v.addEventListener('click', toggle);
+      v.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      });
+    }
+
+    const button = document.querySelector<HTMLButtonElement>('[data-motion-toggle]');
+    const label = () => {
+      if (!button) return;
+      button.textContent = allPaused ? 'Play clips' : 'Pause clips';
+      button.setAttribute('aria-pressed', String(allPaused));
+    };
+    label();
+    button?.addEventListener('click', () => {
+      allPaused = !allPaused;
+      try { localStorage.setItem('clips', allPaused ? 'paused' : 'playing'); } catch {}
+      for (const v of clips) { delete v.dataset.override; sync(v); }
+      label();
+    });
+  </script>
+</body>
+</html>
