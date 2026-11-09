@@ -14,8 +14,8 @@
     - { label: code, url: "https://github.com/adaptive-intelligent-robotics/aware" }
   note: Title, authors and abstract from arXiv 2610.32742 (2026-10-23); venue from the project page. Clip from the project page (cable_collision.mp4).
   clip:
-    video: /media/aware_collision_640.mp4
-    poster: /media/aware_collision_640_poster.jpg
+    video: /media/aware_collision_480.mp4
+    poster: /media/aware_collision_480_poster.jpg
     alt: A robotic crane is struck on its cable and a warning light turns from green to red.
 
 - id: crane2026
@@ -44,8 +44,8 @@
     - { label: video, url: "https://youtu.be/22BeCwBSNtQ" }
     - { label: code, url: "https://github.com/lukebeddow/gripper-mujoco" }
   clip:
-    video: /media/tmech_simreal_640.mp4
-    poster: /media/tmech_simreal_640_poster.jpg
+    video: /media/tmech_simreal_480.mp4
+    poster: /media/tmech_simreal_480_poster.jpg
     alt: The same grasp in simulation and on the real gripper, side by side.
 - id: iros2024
   order: 3
@@ -60,8 +60,8 @@
     - { label: paper, url: "https://discovery.ucl.ac.uk/id/eprint/10195712/1/Wurdemann_Evaluating%20palm%20final.pdf" }
     - { label: video, url: "https://youtu.be/t_7xeef6NoY" }
   clip:
-    video: /media/iros24_palm_640.mp4
-    poster: /media/iros24_palm_640_poster.jpg
+    video: /media/iros24_palm_800.mp4
+    poster: /media/iros24_palm_800_poster.jpg
     alt: Two grippers side by side grasping the same objects, with and without a movable palm.
 - id: sii2024
   order: 4
@@ -77,8 +77,8 @@
     - { label: paper, url: "https://discovery.ucl.ac.uk/id/eprint/10178561/1/sii_2024_xiang.pdf" }
     - { label: video, url: "https://www.youtube.com/watch?v=75Ui5qAEqPg" }
   clip:
-    video: /media/sii24_demo_640.mp4
-    poster: /media/sii24_demo_640_poster.jpg
+    video: /media/sii24_demo_480.mp4
+    poster: /media/sii24_demo_480_poster.jpg
     alt: The affordance and CLIP pipeline locating a green pear, then the robot grasping it.
 - id: iros2021
   order: 5
@@ -94,8 +94,8 @@
     - { label: video, url: "https://www.youtube.com/watch?v=lXAwOyzO2qU" }
     - { label: code, url: "https://github.com/lukebeddow/gripper-arduino" }
   clip:
-    video: /media/iros21_exp2_640.mp4
-    poster: /media/iros21_exp2_640_poster.jpg
+    video: /media/iros21_exp2_480.mp4
+    poster: /media/iros21_exp2_480_poster.jpg
     alt: The caging gripper prototype picking groceries up from the floor.
 - id: thesis2024
   order: 6
@@ -109,7 +109,7 @@
     - { label: code, url: "https://github.com/lukebeddow/gripper-ros" }
     - { label: comparison with related work, url: "/docs/comparison_vs_related_work.pdf" }
   clip:
-    video: /media/limes-with-pics-5x-speed.mp4
-    poster: /media/limes-with-pics-5x-speed_poster.jpg
+    video: /media/limes_312.mp4
+    poster: /media/limes_312_poster.jpg
     alt: The gripper picking limes from a bin, sped up five times.
   note: 11% is a median (Luke, 2026-11-09). Title to check against the deposited thesis; add a thesis link if there is one.

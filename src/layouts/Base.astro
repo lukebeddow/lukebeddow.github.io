@@ -1,7 +1,10 @@
 ---
 // Page shell: <head> metadata for search and link previews, fonts, styles, and the clip controller.
-import '@fontsource-variable/newsreader/opsz.css';
-import '@fontsource-variable/newsreader/opsz-italic.css';
+// Weight-axis files only (57 kB + 63 kB): the optical-size axis more than doubled the download
+// and held back the mobile LCP. The regular face is preloaded so text settles early.
+import '@fontsource-variable/newsreader/wght.css';
+import '@fontsource-variable/newsreader/wght-italic.css';
+import fontRegular from '@fontsource-variable/newsreader/files/newsreader-latin-wght-normal.woff2?url';
 import '../styles/global.css';
 import { getEntry, getCollection } from 'astro:content';
 import { REVIEW, GOATCOUNTER_CODE } from '../lib/site';
@@ -48,6 +51,7 @@ const person = {
   <meta name="color-scheme" content="light dark" />
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#17181a" media="(prefers-color-scheme: dark)" />
+  <link rel="preload" href={fontRegular} as="font" type="font/woff2" crossorigin />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="sitemap" href="/sitemap-index.xml" />
 

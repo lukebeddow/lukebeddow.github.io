@@ -6,5 +6,6 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://lukebeddow.github.io',
   integrations: [sitemap()],
-  build: { format: 'directory' },
+  // The stylesheet is ~3 kB: inlining it removes a render-blocking request (Lighthouse mobile FCP).
+  build: { format: 'directory', inlineStylesheets: 'always' },
 });

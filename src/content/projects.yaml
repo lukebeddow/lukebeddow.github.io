@@ -4,8 +4,8 @@
   title: Thirteen 3D-printed puzzle boxes
   summary: Designed and built thirteen puzzle boxes, each opened by a different mechanism; the clip shows the end of a 50-move solution.
   clip:
-    video: /media/puzzle_box_demo_fast.mp4
-    poster: /media/puzzle_box_demo_fast_poster.jpg
+    video: /media/puzzle_box_472.mp4
+    poster: /media/puzzle_box_472_poster.jpg
     alt: Hands working through the last moves of a 3D-printed puzzle box.
 - id: chess
   order: 2
