@@ -7,27 +7,32 @@
   wide: true
   placeholder: true
   note: Luke will supply a public EGI video (2026-11-09). Re-encode with scripts/media in the project unit.
-- id: corl
+- id: aware
   order: 2
-  title: CoRL paper (Imperial College London)
-  caption: First-author paper from the Imperial role; clip and details to come.
-  placeholder: true
-  note: Title, authors, year, links and a clip from Luke.
+  title: Spotting robot faults from cameras alone
+  caption: AWARE, a world model that flags anomalies such as a weakened motor using only external cameras; here the crane's motor strength is cut and the warning light turns red. CoRL 2026.
+  href: "#pub-aware2026"
+  wide: true
+  clip:
+    video: /media/aware_motor_1280.mp4
+    poster: /media/aware_motor_1280_poster.jpg
+    alt: A robotic crane swinging its arm while its motor strength is reduced from 100 to 50 percent and a warning light changes from green to red.
+  note: Clip from the AWARE project page (motor_degradation.mp4), 1280 px.
 - id: tmech
   order: 3
   title: Grasping real groceries with reinforcement learning
-  caption: Trained in simulation with force feedback from modelled compliant fingers; 95.0% success on 42 grocery items.
+  caption: Trained in simulation with force feedback from modelled compliant fingers; 95.8% success on 42 grocery items.
   href: "#pub-tmech2024"
   clip:
-    video: /media/real_grocery_grasping.mp4
-    poster: /media/real_grocery_grasping_poster.jpg
-    alt: A robot arm with a three-finger gripper picking up grocery items one after another.
+    video: /media/tmech_grocery_800.mp4
+    poster: /media/tmech_grocery_800_poster.jpg
+    alt: A robot arm with a three-finger gripper picking up grocery items one after another, at five times speed.
 - id: iros2024
   order: 4
-  title: Choosing gripper design with learned controllers
-  caption: 24 controllers trained across gripper designs to evaluate a movable palm, from simulation to the real robot.
+  title: Does a movable palm help?
+  caption: The same grasps with and without the palm, using controllers trained for 24 gripper designs; 96% best real-world success with the palm.
   href: "#pub-iros2024"
   clip:
-    video: /media/sim_vs_real_grasping.mp4
-    poster: /media/sim_vs_real_grasping_poster.jpg
-    alt: Side-by-side simulated and real grasps with the same gripper.
+    video: /media/iros24_palm_800.mp4
+    poster: /media/iros24_palm_800_poster.jpg
+    alt: Two identical grippers side by side grasping objects, one using a movable palm and one not, at twice speed.

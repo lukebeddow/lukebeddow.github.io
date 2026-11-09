@@ -1,14 +1,35 @@
 # Titles exactly as published. DOIs from the CV; the SII 2024 title and DOI checked against UCL Discovery (2026-11-08).
 # "paper" links are the UCL Discovery author copies the 2024 site used.
-- id: corl
+- id: aware2026
   order: 1
-  title: CoRL paper title to come
-  authors: [Luke Beddow]
+  title: "Adaptive World-Models for Anomaly Recognition (AWARE): A Framework for Robot Dynamics Prediction and Introspection"
+  authors: [Luke Beddow, George Mavroghenis, Rodrigo Chacon Quesada, Kamil Dreczkowski, Cong Sun, Jiankai Wang, Oscar Kwong-Fai Pang, Antoine Cully]
   venue: Conference on Robot Learning (CoRL)
   year: 2026
   kind: conference
-  placeholder: true
-  note: Luke to supply title, full author list, year, links and a clip (2026-11-09). Year is a guess for layout only.
+  summary: A world model that detects anomalies from external cameras alone, by estimating system dynamics and predicting state; 26% better anomaly classification than the strongest baseline across 240 real robotic-crane trajectories.
+  links:
+    - { label: project page, url: "https://adaptive-intelligent-robotics.github.io/aware/" }
+    - { label: paper, url: "https://arxiv.org/abs/2610.32742" }
+    - { label: code, url: "https://github.com/adaptive-intelligent-robotics/aware" }
+  note: Title, authors and abstract from arXiv 2610.32742 (2026-10-23); venue from the project page. Clip from the project page (cable_collision.mp4).
+  clip:
+    video: /media/aware_collision_640.mp4
+    poster: /media/aware_collision_640_poster.jpg
+    alt: A robotic crane is struck on its cable and a warning light turns from green to red.
+
+- id: crane2026
+  order: 2
+  title: Sampling-Based MuJoCo MPC for Double-Pendulum Sway Suppression on a Shipboard Crane
+  authors: [Oscar Pang, Lisa Coiffard, Paul Templier, Luke Beddow, Kamil Dreczkowski, Antoine Cully]
+  venue: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
+  year: 2026
+  kind: conference
+  summary: A real-time control pipeline built on MuJoCo MPC that suppresses double-pendulum payload sway on an underactuated shipboard crane.
+  links:
+    - { label: paper, url: "https://arxiv.org/abs/2603.16407" }
+  draft: true
+  note: Title and authors from arXiv 2603.16407. Venue from Luke; year 2026 inferred from the arXiv dates, to confirm. No DOI yet.
 - id: tmech2024
   order: 2
   title: Reinforcement Learning Grasping with Force Feedback from Modeling of Compliant Fingers
@@ -17,15 +38,15 @@
   year: 2024
   kind: journal
   doi: 10.1109/TMECH.2024.3450269
-  summary: Trained in simulation using a model of compliant fingers, then grasped 42 real grocery items with 95.0% success.
+  summary: Trained in simulation using a model of compliant fingers, then grasped 42 real grocery items with 95.8% success.
   links:
     - { label: paper, url: "https://discovery.ucl.ac.uk/id/eprint/10195552/1/RL%20Grasping%20final.pdf" }
     - { label: video, url: "https://youtu.be/22BeCwBSNtQ" }
     - { label: code, url: "https://github.com/lukebeddow/gripper-mujoco" }
   clip:
-    video: /media/real_grocery_grasping.mp4
-    poster: /media/real_grocery_grasping_poster.jpg
-    alt: A robot arm with a three-finger gripper picking up grocery items.
+    video: /media/tmech_simreal_640.mp4
+    poster: /media/tmech_simreal_640_poster.jpg
+    alt: The same grasp in simulation and on the real gripper, side by side.
 - id: iros2024
   order: 3
   title: Evaluating a Movable Palm in Caging Inspired Grasping using a Reinforcement Learning-based Approach
@@ -39,9 +60,9 @@
     - { label: paper, url: "https://discovery.ucl.ac.uk/id/eprint/10195712/1/Wurdemann_Evaluating%20palm%20final.pdf" }
     - { label: video, url: "https://youtu.be/t_7xeef6NoY" }
   clip:
-    video: /media/sim_vs_real_grasping.mp4
-    poster: /media/sim_vs_real_grasping_poster.jpg
-    alt: Simulated and real grasps side by side.
+    video: /media/iros24_palm_640.mp4
+    poster: /media/iros24_palm_640_poster.jpg
+    alt: Two grippers side by side grasping the same objects, with and without a movable palm.
 - id: sii2024
   order: 4
   title: Reinforcement Learning-based Grasping via One-Shot Affordance Localization and Zero-Shot Contrastive Language–Image Learning
@@ -56,9 +77,9 @@
     - { label: paper, url: "https://discovery.ucl.ac.uk/id/eprint/10178561/1/sii_2024_xiang.pdf" }
     - { label: video, url: "https://www.youtube.com/watch?v=75Ui5qAEqPg" }
   clip:
-    video: /media/sii24_video.mp4
-    poster: /media/sii24_video_poster.jpg
-    alt: The affordance localisation pipeline picking out an object to grasp.
+    video: /media/sii24_demo_640.mp4
+    poster: /media/sii24_demo_640_poster.jpg
+    alt: The affordance and CLIP pipeline locating a green pear, then the robot grasping it.
 - id: iros2021
   order: 5
   title: A Caging Inspired Gripper using Flexible Fingers and a Movable Palm
@@ -73,9 +94,9 @@
     - { label: video, url: "https://www.youtube.com/watch?v=lXAwOyzO2qU" }
     - { label: code, url: "https://github.com/lukebeddow/gripper-arduino" }
   clip:
-    video: /media/IROS21_Luke_video.mp4
-    poster: /media/IROS21_Luke_video_poster.jpg
-    alt: The caging gripper prototype lifting groceries in an experiment.
+    video: /media/iros21_exp2_640.mp4
+    poster: /media/iros21_exp2_640_poster.jpg
+    alt: The caging gripper prototype picking groceries up from the floor.
 - id: thesis2024
   order: 6
   title: Learning-based Grasping of Grocery Items using Caging-inspired Gripper Design
@@ -91,5 +112,4 @@
     video: /media/limes-with-pics-5x-speed.mp4
     poster: /media/limes-with-pics-5x-speed_poster.jpg
     alt: The gripper picking limes from a bin, sped up five times.
-  draft: true
-  note: Numbers as on the 2024 site. The CV says "11% on average"; confirm mean or median. Title to check against the deposited thesis; add a thesis link if there is one.
+  note: 11% is a median (Luke, 2026-11-09). Title to check against the deposited thesis; add a thesis link if there is one.

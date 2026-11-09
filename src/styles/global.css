@@ -114,3 +114,4 @@ footer { margin-top: 56px; padding-top: 14px; border-top: 1px solid var(--rule);
 .clip-note { margin: 14px 0 0; font-size: 15px; color: var(--muted); }
 .featured figure { margin: 0; }
 .entry > .clip-wrap, .entry > .slot { align-self: start; }
+@media (max-width: 860px) { .entry > .no-clip { display: none; } }

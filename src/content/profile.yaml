@@ -2,7 +2,7 @@
 luke:
   name: Luke Beddow
   headline: Robotics researcher working on robot learning for reliable industrial automation.
-  description: Robotics researcher working on robot learning (imitation learning, reinforcement learning, VLAs) for reliable industrial automation. PhD, UCL.
+  description: Founding ML research engineer at Embodied General Intelligence, working on robot learning (reinforcement and imitation learning, VLAs) for reliable industrial automation.
   photo: /media/profile-photo-480.webp
   email: lukebeddow@gmail.com
   links:
@@ -11,17 +11,28 @@ luke:
     - { label: LinkedIn, url: "https://www.linkedin.com/in/luke-beddow-130264171/" }
   about:
     - text: >-
-        I research robot learning for industrial applications such as factory automation, where the aim is
-        high reliability. At EGI I work on imitation learning and offline and online
-        reinforcement learning, with vision-language-action models (VLAs) and learned control policies.
-        It is a startup, so the role is varied: I also do a good deal of robotics engineering.
+        I research robot learning for industrial automation. At Embodied General Intelligence, a startup,
+        we develop imitation and reinforcement learning for real robots doing factory tasks such as assembly,
+        packing and unpacking, in projects with companies ranging from a large car manufacturer to a cosmetics
+        bottling plant. I lead our work on offline and online reinforcement learning, in simulation and on
+        real robots, in particular fine-tuning vision-language-action models (VLAs) for high-precision tasks
+        where zero-shot performance, or behavioural cloning from demonstrations, falls short on accuracy,
+        reliability and repeatability.
       draft: true
-      note: Drafted from Luke's description of the EGI role (2026-11-09). Company full name and job title still to come.
+      note: From Luke's notes to the CV agent (2026-11-09). Check he is happy to mention the client types publicly.
     - text: >-
-        Before EGI I was a Research Associate at Imperial College London, building world models for robot
-        control and deploying them on an underactuated crane robot and a quadruped. My PhD at
-        UCL's Robot Perception and Learning Lab developed reinforcement learning methods and a
-        caging-inspired gripper for grasping groceries, tested extensively on real hardware.
+        I am on site full time, and about a third of my work is robotics engineering: the ROS 2 stack, the
+        robot's impedance controller, the operator interface, and running learned policies on the real robots
+        (GPU and multi-device deployment, real-time action chunking).
       draft: true
-      note: Imperial facts from the CV; PhD wording from the 2024 site. Add the CoRL paper once its details are in.
+      note: Luke's 70/30 split between ML research and robotics engineering. The controller is client-provided; not said here.
+    - text: >-
+        Before that I was a postdoctoral Research Associate at Imperial College London, on a DARPA project on
+        monitoring robotic systems such as cranes and quadrupeds remotely, from cameras on a separate, air-gapped
+        system. This led to AWARE, a world model that detects anomalies from camera observations alone (first
+        author, CoRL 2026). I also trained reinforcement learning controllers for an underactuated robotic crane
+        and moved them from simulation to the real system. My PhD at UCL's Robot Perception and Learning Lab
+        developed reinforcement learning methods and a caging-inspired gripper for grasping groceries, tested
+        extensively on real hardware.
+      draft: true
   updated: "2026-11"

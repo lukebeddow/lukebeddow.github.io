@@ -25,7 +25,7 @@ if (p.doi) links.splice(1, 0, { label: 'doi', url: `https://doi.org/${p.doi}` })
 const external = (url: string) => /^https?:/.test(url);
 ---
 <article class:list={['entry', { draft: REVIEW && p.draft }]} id={`pub-${p.id}`}>
-  {p.clip ? <Clip clip={p.clip} /> : <div class="slot">{REVIEW ? "clip to come" : ""}</div>}
+  {p.clip ? <Clip clip={p.clip} /> : REVIEW ? <div class="slot">clip to come</div> : <div class="no-clip" aria-hidden="true"></div>}
   <div>
     <h3>{p.placeholder ? <Todo>{p.title}</Todo> : p.title}</h3>
     {p.authors && (
