@@ -12,11 +12,11 @@
     - { label: project page, url: "https://adaptive-intelligent-robotics.github.io/aware/" }
     - { label: paper, url: "https://arxiv.org/abs/2610.32742" }
     - { label: code, url: "https://github.com/adaptive-intelligent-robotics/aware" }
-  note: Title, authors and abstract from arXiv 2610.32742 (2026-10-23); venue from the project page. Clip from the project page (cable_collision.mp4).
+  note: Title, authors and abstract from arXiv 2610.32742 (2026-10-23); venue confirmed by Luke (2026-11-10). Clip is the summary montage shared with the featured band.
   clip:
-    video: /media/aware_collision_480.mp4
-    poster: /media/aware_collision_480_poster.jpg
-    alt: A robotic crane is struck on its cable and a warning light turns from green to red.
+    video: /media/aware_summary_1280.mp4
+    poster: /media/aware_summary_1280_poster.jpg
+    alt: AWARE summary - camera tracking of a robotic crane, a simulated world model, and a weakened motor detected as a warning light turns red.
 
 - id: crane2026
   order: 2
@@ -28,8 +28,7 @@
   summary: A real-time control pipeline built on MuJoCo MPC that suppresses double-pendulum payload sway on an underactuated shipboard crane.
   links:
     - { label: paper, url: "https://arxiv.org/abs/2603.16407" }
-  draft: true
-  note: Title and authors from arXiv 2603.16407. Venue from Luke; year 2026 inferred from the arXiv dates, to confirm. No DOI yet.
+  note: Title and authors from arXiv 2603.16407. IROS 2026 confirmed by Luke (2026-11-10). No DOI yet.
 - id: tmech2024
   order: 2
   title: Reinforcement Learning Grasping with Force Feedback from Modeling of Compliant Fingers

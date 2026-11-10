@@ -6,18 +6,18 @@
   caption: Public company video, to be supplied by Luke.
   wide: true
   placeholder: true
-  note: Luke will supply a public EGI video (2026-11-09). Re-encode with scripts/media in the project unit.
+  note: No public EGI video yet (Luke, 2026-11-10). Shown only in review builds until one exists.
 - id: aware
   order: 2
   title: Spotting robot faults from cameras alone
-  caption: AWARE, a world model that flags anomalies such as a weakened motor using only external cameras; here the crane's motor strength is cut and the warning light turns red. CoRL 2026.
+  caption: "AWARE (CoRL 2026): camera-only state estimation, a world model trained in simulation to predict the crane's dynamics, and live detection of a weakened motor as the warning light turns red."
   href: "#pub-aware2026"
   wide: true
   clip:
-    video: /media/aware_motor_1280.mp4
-    poster: /media/aware_motor_1280_poster.jpg
-    alt: A robotic crane swinging its arm while its motor strength is reduced from 100 to 50 percent and a warning light changes from green to red.
-  note: Clip from the AWARE project page (motor_degradation.mp4), 1280 px.
+    video: /media/aware_summary_1280.mp4
+    poster: /media/aware_summary_1280_poster.jpg
+    alt: "The AWARE title over a robotic crane, then camera tracking of the crane, a simulated crane with a prediction-error chart, and the real crane's motor strength dropping to 50 percent as a warning light turns red."
+  note: 20.6 s montage from the AWARE project page, built by scripts/media/aware_montage.sh (2026-11-10).
 - id: tmech
   order: 3
   title: Grasping real groceries with reinforcement learning

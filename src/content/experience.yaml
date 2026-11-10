@@ -4,11 +4,12 @@
   kind: role
   title: Founding Machine Learning Research Engineer
   org: Embodied General Intelligence
+  orgUrl: "https://www.egi.ltd"
   start: "2026-03"
   end: present
   summary: Robot learning for factory automation (assembly, packing, unpacking). Lead on offline and online reinforcement learning, including fine-tuning VLAs for high-precision tasks; the ROS 2 stack, operator interface and policy deployment on real robots. Machine Learning Research Engineer until September 2026.
   draft: true
-  note: Titles and dates from Luke (2026-11-09). Company URL to come.
+  note: Titles, dates and URL from Luke (2026-11-09, 2026-11-10).
 - id: imperial
   kind: role
   title: Research Associate (postdoctoral)
