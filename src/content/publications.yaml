@@ -14,8 +14,8 @@
     - { label: code, url: "https://github.com/adaptive-intelligent-robotics/aware" }
   note: Title, authors and abstract from arXiv 2610.32742 (2026-10-23); venue confirmed by Luke (2026-11-10). Clip is the summary montage shared with the featured band.
   clip:
-    video: /media/aware_summary_640.mp4
-    poster: /media/aware_summary_640_poster.jpg
+    video: /media/aware_summary_1280.mp4
+    poster: /media/aware_summary_1280_poster.jpg
     alt: AWARE summary - camera tracking of a robotic crane, a simulated world model, and a weakened motor detected as a warning light turns red.
 
 - id: crane2026
@@ -28,6 +28,9 @@
   summary: A real-time control pipeline built on MuJoCo MPC that suppresses double-pendulum payload sway on an underactuated shipboard crane.
   links:
     - { label: paper, url: "https://arxiv.org/abs/2603.16407" }
+  image:
+    src: /media/crane_mpc_figure_800.webp
+    alt: "Control architecture: cross-entropy-method planning in MuJoCo MPC sends actions, combined with operator control, to the real crane, whose state is fed back."
   note: Title and authors from arXiv 2603.16407. IROS 2026 confirmed by Luke (2026-11-10). No DOI yet.
 - id: tmech2024
   order: 2
@@ -108,7 +111,7 @@
     - { label: code, url: "https://github.com/lukebeddow/gripper-ros" }
     - { label: comparison with related work, url: "/docs/comparison_vs_related_work.pdf" }
   clip:
-    video: /media/phd_binpick_640.mp4
-    poster: /media/phd_binpick_640_poster.jpg
+    video: /media/phd_binpick_800.mp4
+    poster: /media/phd_binpick_800_poster.jpg
     alt: The gripper picking limes from a bin, sped up five times.
   note: 11% is a median (Luke, 2026-11-09). Title to check against the deposited thesis; add a thesis link if there is one.

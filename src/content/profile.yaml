@@ -15,12 +15,10 @@ luke:
         reinforcement learning, from fine-tuning vision-language-action models (VLAs) to training high-frequency
         controllers. At Embodied General Intelligence I lead reinforcement learning research, deploying offline
         and online methods on high-precision tasks such as bimanual factory assembly for major European
-        industrial clients. I am on site full time and manage policy deployment and the robotics software stack.
-      draft: true
-      note: Luke's text (2026-11-15), lightly edited for flow.
+        industrial clients.
+      note: Luke's final text (2026-11-15).
     - text: >-
         Before that I was a postdoc at Imperial College London, working on world models and control policies
         for critical infrastructure (CoRL 2026), and I completed my PhD at University College London on
         reinforcement learning for autonomous grocery grasping.
-      draft: true
   updated: "2026-11"

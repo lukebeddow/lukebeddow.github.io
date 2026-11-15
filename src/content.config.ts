@@ -62,8 +62,8 @@ const roles = defineCollection({
     orgUrl: z.url().optional(),
     start: yearMonth,
     end: z.union([yearMonth, z.literal('present')]),
-    points: z.array(z.string()).min(1).max(4),
-    links: links,
+    summary: z.string().max(200), // one sentence under the clip
+    href: z.string().optional(), // where the title points (e.g. the paper on this page)
     clip: clip.optional(),
     ...flags,
   }),
@@ -93,6 +93,7 @@ const publications = defineCollection({
     summary: z.string().optional(),
     links: links,
     clip: clip.optional(),
+    image: z.object({ src: publicPath, alt: z.string().min(3) }).optional(), // a still (e.g. a paper figure) when there is no clip
     ...flags,
   }),
 });

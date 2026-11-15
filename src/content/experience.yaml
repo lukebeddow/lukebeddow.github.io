@@ -11,7 +11,8 @@
 - id: imperial
   kind: role
   title: Postdoctoral Research Associate
-  org: Imperial College London
+  org: Imperial College London, Adaptive & Intelligent Robotics Lab
+  orgUrl: "https://www.imperial.ac.uk/adaptive-intelligent-robotics/"
   start: "2025-01"
   end: "2026-03"
   note: Fixed-term one-year post-doc (Luke). "Led a three-person team" from the CV.

@@ -1,5 +1,4 @@
-# The "Work" cards: one per role, newest first by `order`, each with its best video.
-# Sources: Luke's notes (2026-11-09, 2026-11-15), the CV, the papers.
+# The "Work" section: one full-width clip per role with a one-sentence summary (Luke, 2026-11-15).
 - id: egi
   order: 1
   title: Founding Machine Learning Research Engineer
@@ -7,33 +6,21 @@
   orgUrl: "https://www.egi.ltd"
   start: "2026-03"
   end: present
-  points:
-    - Lead reinforcement learning research, deploying offline and online methods, including fine-tuning VLAs, on high-precision tasks such as bimanual factory assembly for major European industrial clients.
-    - On site full time, managing policy deployment and the robotics software stack, from real-time inference and ROS 2 to impedance control.
-    - Run lab operations for a team of up to eight, manage the supplier of our low-level robotics infrastructure, and present our machine learning work to clients on factory floors.
-  links:
-    - { label: egi.ltd, url: "https://www.egi.ltd" }
-  draft: true
-  note: No clip until EGI approves the medley video (zip-tie clip ready, see outputs/egi_private/). Machine Learning Research Engineer until September 2026.
+  summary: Leading reinforcement learning research and deployment, focused on high-precision manipulation tasks.
+  note: No clip until EGI approves footage (candidates in outputs/egi_private/; tested on branch egi-preview). Machine Learning Research Engineer until September 2026.
 - id: imperial
   order: 2
   title: Postdoctoral Research Associate
-  org: Imperial College London
-  orgUrl: "https://www.imperial.ac.uk"
+  org: Imperial College London, Adaptive & Intelligent Robotics Lab
+  orgUrl: "https://www.imperial.ac.uk/adaptive-intelligent-robotics/"
   start: "2025-01"
   end: "2026-03"
-  points:
-    - "World models for monitoring critical infrastructure from cameras alone: AWARE detects faults such as a weakened crane motor without access to the robot's own sensors (first author, CoRL 2026)."
-    - Reinforcement learning control for an underactuated robotic crane, trained in simulation and deployed on hardware (co-author, IROS 2026).
-    - Part of a DARPA project; led a three-person research team.
-  links:
-    - { label: AWARE project page, url: "https://adaptive-intelligent-robotics.github.io/aware/" }
-    - { label: papers, url: "#pub-aware2026" }
+  summary: World models and sim-to-real policy transfer for infrastructure; first-author CoRL 2026 paper.
+  href: "#pub-aware2026"
   clip:
-    video: /media/aware_summary_640.mp4
-    poster: /media/aware_summary_640_poster.jpg
-    alt: "AWARE: a robotic crane under camera tracking, a simulated world model with a prediction-error chart, and a weakened motor detected as a warning light turns red."
-  draft: true
+    video: /media/aware_summary_1280.mp4
+    poster: /media/aware_summary_1280_poster.jpg
+    alt: "AWARE: the title over a robotic crane, camera tracking of the crane, a simulated world model with a prediction-error chart, and a weakened motor detected as a warning light turns red."
 - id: phd
   order: 3
   title: PhD in Computer Science
@@ -41,16 +28,11 @@
   orgUrl: "https://rpl-as-ucl.github.io/"
   start: "2020-10"
   end: "2024-10"
-  points:
-    - Reinforcement learning for autonomous grocery grasping with a caging-inspired gripper of my own design, trained in simulation and deployed on a real robot arm.
-    - 95.8% success on 42 real grocery items, and an 18% improvement on a bin-picking benchmark by Ocado; three first-author papers.
-  links:
-    - { label: papers, url: "#pub-tmech2024" }
-    - { label: comparison with related work, url: "/docs/comparison_vs_related_work.pdf" }
-    - { label: code, url: "https://github.com/lukebeddow/gripper-ros" }
+  summary: Reinforcement learning for autonomous grocery grasping; 95.8% success on 42 real grocery items, +18% on Ocado's bin-picking benchmark, and three first-author papers.
+  href: "#pub-thesis2024"
   clip:
-    video: /media/phd_binpick_640.mp4
-    poster: /media/phd_binpick_640_poster.jpg
+    video: /media/phd_binpick_800.mp4
+    poster: /media/phd_binpick_800_poster.jpg
     alt: The robot picking bags of limes from a green crate into a blue one, with the overhead camera's segmentation shown between picks, at five times speed.
     aspect: "1500 / 1080"
-  draft: true
+  note: First 30 s of Luke's 1080p bin-picking video (full run is 58 s).

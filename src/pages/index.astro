@@ -4,13 +4,12 @@ import Base from '../layouts/Base.astro';
 import RoleCard from '../components/RoleCard.astro';
 import Entry from '../components/Entry.astro';
 import Todo from '../components/Todo.astro';
-import { REVIEW, shown, yearSpan, monthYear } from '../lib/site';
+import { REVIEW, shown, dateSpan, monthYear } from '../lib/site';
 
 const profile = (await getEntry('profile', 'luke'))!.data;
 const byOrder = <T extends { data: { order: number } }>(a: T, b: T) => a.data.order - b.data.order;
 
 const roles = (await getCollection('roles')).filter(shown).sort(byOrder);
-const expertise = (await getCollection('expertise')).filter(shown).sort(byOrder);
 const publications = (await getCollection('publications')).filter(shown).sort(byOrder);
 const projects = (await getCollection('projects')).filter(shown).sort(byOrder);
 const recognition = (await getCollection('recognition')).filter(shown).sort(byOrder);
@@ -24,7 +23,6 @@ const title = `${profile.name}: reinforcement learning for real-world robotics`;
 const sections = [
   ['about', 'About'],
   ['work', 'Work'],
-  ['expertise', 'Expertise'],
   ['publications', 'Publications'],
   ['projects', 'Projects'],
   ['experience', 'Experience and education'],
@@ -63,27 +61,18 @@ const sections = [
         <h2>Work</h2>
         {roles.map(({ id, data: r }) => (
           <RoleCard id={id} title={r.title} org={r.org} orgUrl={r.orgUrl} start={r.start} end={r.end}
-            points={r.points} links={r.links} clip={r.clip} draft={r.draft} />
+            summary={r.summary} href={r.href} clip={r.clip} draft={r.draft} />
         ))}
         <p class="clip-note">
           Clips are silent and loop while on screen. <button class="motion-toggle" type="button" data-motion-toggle aria-pressed="false">Pause clips</button>
         </p>
       </section>
 
-      <section id="expertise">
-        <h2>Expertise</h2>
-        <dl class="expertise">
-          {expertise.map(({ data: x }) => (
-            <div class:list={{ draft: REVIEW && x.draft }}><dt>{x.area}</dt><dd>{x.detail}</dd></div>
-          ))}
-        </dl>
-      </section>
-
       <section id="publications">
         <h2>Publications</h2>
         {publications.map(({ id, data: p }) => (
           <Entry id={id} title={p.title} clip={p.clip} authors={p.authors} equalContribution={p.equalContribution}
-            venue={p.venue} year={p.year} doi={p.doi} summary={p.summary} links={p.links}
+            venue={p.venue} year={p.year} doi={p.doi} summary={p.summary} links={p.links} image={p.image}
             draft={p.draft} placeholder={p.placeholder} />
         ))}
       </section>
@@ -100,7 +89,7 @@ const sections = [
         <dl class="cv">
           {experience.map(({ data: e }) => (
             <>
-              <dt>{yearSpan(e.start, e.end)}</dt>
+              <dt>{dateSpan(e.start, e.end)}</dt>
               <dd class:list={{ draft: REVIEW && e.draft }}>
                 {e.title ? <><b>{e.title}</b>, </> : <><Todo>job title</Todo> </>}
                 {e.orgUrl ? <a href={e.orgUrl} target="_blank" rel="noopener">{e.org}</a> : e.org}

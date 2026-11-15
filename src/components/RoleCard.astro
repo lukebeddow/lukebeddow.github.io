@@ -1,8 +1,8 @@
 ---
-// A "Work" card: the role's best clip beside its title, organisation, dates and two or three points.
-// Without a clip (e.g. footage awaiting approval) the text spans the full width.
+// A "Work" card: the role's clip at full column width, then title, organisation, dates and one sentence.
+// Without a clip (e.g. footage awaiting approval) only the text is shown.
 import Clip from './Clip.astro';
-import { REVIEW, yearSpan } from '../lib/site';
+import { REVIEW, dateSpan } from '../lib/site';
 
 interface Props {
   id: string;
@@ -11,27 +11,19 @@ interface Props {
   orgUrl?: string | undefined;
   start: string;
   end: string;
-  points: string[];
-  links: { label: string; url: string }[];
+  summary: string;
+  href?: string | undefined;
   clip?: { video: string; poster: string; alt: string; aspect?: string | undefined } | undefined;
   draft: boolean;
 }
 const r = Astro.props;
-const external = (url: string) => /^https?:/.test(url);
 ---
 <article class:list={['role', { 'no-clip': !r.clip, draft: REVIEW && r.draft }]} id={`role-${r.id}`}>
   {r.clip && <Clip clip={r.clip} natural />}
-  <div>
-    <h3>{r.title}</h3>
-    <p class="org">
-      {r.orgUrl ? <a href={r.orgUrl} target="_blank" rel="noopener">{r.org}</a> : r.org}
-      <span class="dates">{yearSpan(r.start, r.end)}</span>
-    </p>
-    <ul>{r.points.map((p) => <li>{p}</li>)}</ul>
-    {r.links.length > 0 && (
-      <p class="links">
-        {r.links.map((l) => <a href={l.url} {...(external(l.url) ? { target: '_blank', rel: 'noopener' } : {})}>{l.label}</a>)}
-      </p>
-    )}
-  </div>
+  <h3>{r.href ? <a href={r.href}>{r.title}</a> : r.title}</h3>
+  <p class="org">
+    {r.orgUrl ? <a href={r.orgUrl} target="_blank" rel="noopener">{r.org}</a> : r.org}
+    <span class="dates">{dateSpan(r.start, r.end)}</span>
+  </p>
+  <p class="summary">{r.summary}</p>
 </article>

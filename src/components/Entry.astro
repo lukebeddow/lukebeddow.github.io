@@ -8,6 +8,7 @@ interface Props {
   id: string;
   title: string;
   clip?: { video: string; poster: string; alt: string } | undefined;
+  image?: { src: string; alt: string } | undefined;
   authors?: string[];
   equalContribution?: boolean;
   venue?: string;
@@ -25,7 +26,9 @@ if (p.doi) links.splice(1, 0, { label: 'doi', url: `https://doi.org/${p.doi}` })
 const external = (url: string) => /^https?:/.test(url);
 ---
 <article class:list={['entry', { draft: REVIEW && p.draft }]} id={`pub-${p.id}`}>
-  {p.clip ? <Clip clip={p.clip} /> : REVIEW ? <div class="slot">clip to come</div> : <div class="no-clip" aria-hidden="true"></div>}
+  {p.clip ? <Clip clip={p.clip} />
+    : p.image ? <img class="still" src={p.image.src} alt={p.image.alt} loading="lazy" decoding="async" />
+    : REVIEW ? <div class="slot">clip to come</div> : <div class="no-clip" aria-hidden="true"></div>}
   <div>
     <h3>{p.placeholder ? <Todo>{p.title}</Todo> : p.title}</h3>
     {p.authors && (
