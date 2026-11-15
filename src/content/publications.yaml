@@ -14,8 +14,8 @@
     - { label: code, url: "https://github.com/adaptive-intelligent-robotics/aware" }
   note: Title, authors and abstract from arXiv 2610.32742 (2026-10-23); venue confirmed by Luke (2026-11-10). Clip is the summary montage shared with the featured band.
   clip:
-    video: /media/aware_summary_1280.mp4
-    poster: /media/aware_summary_1280_poster.jpg
+    video: /media/aware_summary_640.mp4
+    poster: /media/aware_summary_640_poster.jpg
     alt: AWARE summary - camera tracking of a robotic crane, a simulated world model, and a weakened motor detected as a warning light turns red.
 
 - id: crane2026
@@ -59,8 +59,8 @@
     - { label: paper, url: "https://discovery.ucl.ac.uk/id/eprint/10195712/1/Wurdemann_Evaluating%20palm%20final.pdf" }
     - { label: video, url: "https://youtu.be/t_7xeef6NoY" }
   clip:
-    video: /media/iros24_palm_800.mp4
-    poster: /media/iros24_palm_800_poster.jpg
+    video: /media/iros24_palm_480.mp4
+    poster: /media/iros24_palm_480_poster.jpg
     alt: Two grippers side by side grasping the same objects, with and without a movable palm.
 - id: sii2024
   order: 4
@@ -108,7 +108,7 @@
     - { label: code, url: "https://github.com/lukebeddow/gripper-ros" }
     - { label: comparison with related work, url: "/docs/comparison_vs_related_work.pdf" }
   clip:
-    video: /media/limes_312.mp4
-    poster: /media/limes_312_poster.jpg
+    video: /media/phd_binpick_640.mp4
+    poster: /media/phd_binpick_640_poster.jpg
     alt: The gripper picking limes from a bin, sped up five times.
   note: 11% is a median (Luke, 2026-11-09). Title to check against the deposited thesis; add a thesis link if there is one.

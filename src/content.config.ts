@@ -26,6 +26,7 @@ const clip = z.object({
   video: publicPath,
   poster: publicPath,
   alt: z.string().min(3),
+  aspect: z.string().regex(/^\d+ \/ \d+$/, 'e.g. "16 / 9"').optional(), // only where the role cards should not crop to 16:9
 });
 
 const links = z
@@ -52,15 +53,28 @@ const profile = defineCollection({
   }),
 });
 
-const featured = defineCollection({
-  loader: file('src/content/featured.yaml'),
+const roles = defineCollection({
+  loader: file('src/content/roles.yaml'),
   schema: z.object({
     order: z.number(),
     title: z.string(),
-    caption: z.string(),
-    href: z.string().optional(), // anchor on this page or an external link
-    wide: z.boolean().default(false), // span the full column (use for high-resolution clips only)
+    org: z.string(),
+    orgUrl: z.url().optional(),
+    start: yearMonth,
+    end: z.union([yearMonth, z.literal('present')]),
+    points: z.array(z.string()).min(1).max(4),
+    links: links,
     clip: clip.optional(),
+    ...flags,
+  }),
+});
+
+const expertise = defineCollection({
+  loader: file('src/content/expertise.yaml'),
+  schema: z.object({
+    order: z.number(),
+    area: z.string(),
+    detail: z.string(),
     ...flags,
   }),
 });
@@ -119,4 +133,4 @@ const recognition = defineCollection({
   }),
 });
 
-export const collections = { profile, featured, publications, projects, experience, recognition };
+export const collections = { profile, roles, expertise, publications, projects, experience, recognition };

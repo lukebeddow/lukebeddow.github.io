@@ -1,8 +1,8 @@
 # Who Luke is, in one place. Sources: Luke (2026-11-09), the CV (Overleaf, Nov 2026), the 2024 site.
 luke:
   name: Luke Beddow
-  headline: Reinforcement learning for real-world robotics.
-  description: Founding ML research engineer at Embodied General Intelligence, working on reinforcement learning for real-world robotics, world models, VLAs and robot systems.
+  headline: Reinforcement learning for real-world robot deployment.
+  description: Reinforcement learning and learned robot control for real-world deployment. Founding ML research engineer at Embodied General Intelligence; PhD, UCL.
   photo: /media/profile-photo-480.webp
   email: lukebeddow@gmail.com
   links:
@@ -11,13 +11,16 @@ luke:
     - { label: LinkedIn, url: "https://www.linkedin.com/in/luke-beddow-130264171/" }
   about:
     - text: >-
-        I work on reinforcement learning for real-world robotics, and on the systems that let learned
-        control run reliably on real hardware. At Embodied General Intelligence I lead our offline and online
-        reinforcement learning for industrial automation, fine-tuning vision-language-action models (VLAs) for
-        high-precision tasks, and build much of the robot stack they run on. At Imperial College London I
-        developed world models that detect robot faults from cameras alone (CoRL 2026) and trained
-        reinforcement learning controllers for a robotic crane, from simulation to hardware. My PhD at UCL
-        used reinforcement learning and a new gripper design to grasp groceries reliably.
+        I specialise in learned robot control policies for real-world deployment. My main research focus is
+        reinforcement learning, from fine-tuning vision-language-action models (VLAs) to training high-frequency
+        controllers. At Embodied General Intelligence I lead reinforcement learning research, deploying offline
+        and online methods on high-precision tasks such as bimanual factory assembly for major European
+        industrial clients. I am on site full time and manage policy deployment and the robotics software stack.
       draft: true
-      note: Shortened 2026-11-10 to Luke's brief - RL for real-world robotics across three roles; world models, VLAs, robot systems engineering.
+      note: Luke's text (2026-11-15), lightly edited for flow.
+    - text: >-
+        Before that I was a postdoc at Imperial College London, working on world models and control policies
+        for critical infrastructure (CoRL 2026), and I completed my PhD at University College London on
+        reinforcement learning for autonomous grocery grasping.
+      draft: true
   updated: "2026-11"

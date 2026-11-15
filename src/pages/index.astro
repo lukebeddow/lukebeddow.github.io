@@ -1,7 +1,7 @@
 ---
 import { getCollection, getEntry } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import Clip from '../components/Clip.astro';
+import RoleCard from '../components/RoleCard.astro';
 import Entry from '../components/Entry.astro';
 import Todo from '../components/Todo.astro';
 import { REVIEW, shown, yearSpan, monthYear } from '../lib/site';
@@ -9,7 +9,8 @@ import { REVIEW, shown, yearSpan, monthYear } from '../lib/site';
 const profile = (await getEntry('profile', 'luke'))!.data;
 const byOrder = <T extends { data: { order: number } }>(a: T, b: T) => a.data.order - b.data.order;
 
-const featured = (await getCollection('featured')).filter(shown).sort(byOrder);
+const roles = (await getCollection('roles')).filter(shown).sort(byOrder);
+const expertise = (await getCollection('expertise')).filter(shown).sort(byOrder);
 const publications = (await getCollection('publications')).filter(shown).sort(byOrder);
 const projects = (await getCollection('projects')).filter(shown).sort(byOrder);
 const recognition = (await getCollection('recognition')).filter(shown).sort(byOrder);
@@ -19,10 +20,11 @@ const experience = (await getCollection('experience'))
   .sort((a, b) => (b.data.end === 'present' ? '9999' : b.data.start).localeCompare(a.data.end === 'present' ? '9999' : a.data.start));
 const now = experience.find((e) => e.data.kind === 'role' && e.data.end === 'present');
 
-const title = `${profile.name}: robot learning researcher`;
+const title = `${profile.name}: reinforcement learning for real-world robotics`;
 const sections = [
   ['about', 'About'],
-  ['work', 'Selected work'],
+  ['work', 'Work'],
+  ['expertise', 'Expertise'],
   ['publications', 'Publications'],
   ['projects', 'Projects'],
   ['experience', 'Experience and education'],
@@ -58,23 +60,23 @@ const sections = [
       </section>
 
       <section id="work">
-        <div class="featured-head">
-          <h2>Selected work</h2>
-        </div>
-        <div class="featured">
-          {featured.map(({ data: f }) => (
-            <figure class:list={["card", { wide: f.wide, draft: REVIEW && f.draft }]}>
-              {f.clip ? <Clip clip={f.clip} /> : <div class="slot">{f.caption}</div>}
-              <figcaption>
-                <h3>{f.href ? <a href={f.href}>{f.title}</a> : f.placeholder ? <Todo>{f.title}</Todo> : f.title}</h3>
-                {f.clip && <p>{f.caption}</p>}
-              </figcaption>
-            </figure>
-          ))}
-        </div>
+        <h2>Work</h2>
+        {roles.map(({ id, data: r }) => (
+          <RoleCard id={id} title={r.title} org={r.org} orgUrl={r.orgUrl} start={r.start} end={r.end}
+            points={r.points} links={r.links} clip={r.clip} draft={r.draft} />
+        ))}
         <p class="clip-note">
           Clips are silent and loop while on screen. <button class="motion-toggle" type="button" data-motion-toggle aria-pressed="false">Pause clips</button>
         </p>
+      </section>
+
+      <section id="expertise">
+        <h2>Expertise</h2>
+        <dl class="expertise">
+          {expertise.map(({ data: x }) => (
+            <div class:list={{ draft: REVIEW && x.draft }}><dt>{x.area}</dt><dd>{x.detail}</dd></div>
+          ))}
+        </dl>
       </section>
 
       <section id="publications">

@@ -1,0 +1,19 @@
+# Short list of core expertise (Luke, 2026-11-15). Keep it to four or five lines.
+- id: rl
+  order: 1
+  area: Reinforcement learning
+  detail: offline and online methods
+- id: il
+  order: 2
+  area: Imitation learning
+  detail: including vision-language-action models (VLAs)
+- id: sim
+  order: 3
+  area: Simulation and sim-to-real transfer
+  detail: MuJoCo, MJX
+- id: deploy
+  order: 4
+  area: Robot deployment
+  detail: real-time policy inference, ROS 2, low-level control (e.g. impedance), industrial cobots
+  draft: true
+  note: Luke's wording with "policy inference", "low-level control" and "industrial cobots" suggested by the agent.

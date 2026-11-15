@@ -1,6 +1,14 @@
-# Personal projects. Sources: the 2024 site.
-- id: puzzle-boxes
+# Projects. Sources: the 2024 site; dissertation title from the CV (Luke's preference, 2026-11-15).
+- id: flexure
   order: 1
+  title: Computational mathematical modelling of flexure robots
+  summary: "MEng dissertation, University of Bath, 2020: a mathematical model of a flexure robot, simulated in MATLAB with numerical methods."
+  clip:
+    video: /media/flexure_718.mp4
+    poster: /media/flexure_718_poster.jpg
+    alt: A simulated flexure robot bending as it traces a circular path, plotted in 3D.
+- id: puzzle-boxes
+  order: 2
   title: Thirteen 3D-printed puzzle boxes
   summary: Designed and built thirteen puzzle boxes, each opened by a different mechanism; the clip shows the end of a 50-move solution.
   clip:
@@ -8,7 +16,7 @@
     poster: /media/puzzle_box_472_poster.jpg
     alt: Hands working through the last moves of a 3D-printed puzzle box.
 - id: chess
-  order: 2
+  order: 3
   title: A chess engine in C++ and Python
   summary: A traditional engine, written in C++ and compiled into Python, that beats me; then a deep-learned evaluation function.
   links:

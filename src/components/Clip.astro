@@ -1,13 +1,16 @@
 ---
 // A muted looping clip. It shows its poster until scrolled into view, then plays;
 // it stays still for visitors who ask for reduced motion. Click or Enter toggles it.
+// `natural` keeps the clip's own aspect ratio (when it declares one) instead of cropping to 16:9.
 interface Props {
-  clip: { video: string; poster: string; alt: string };
+  clip: { video: string; poster: string; alt: string; aspect?: string | undefined };
+  natural?: boolean;
 }
-const { clip } = Astro.props;
+const { clip, natural = false } = Astro.props;
+const style = natural && clip.aspect ? `aspect-ratio: ${clip.aspect}` : undefined;
 ---
 <div class="clip-wrap">
-  <video class="clip" muted loop playsinline preload="none" poster={clip.poster} aria-label={clip.alt} title={clip.alt} tabindex="0">
+  <video class="clip" muted loop playsinline preload="none" poster={clip.poster} aria-label={clip.alt} title={clip.alt} tabindex="0" style={style}>
     <source src={clip.video} type="video/mp4" />
   </video>
   <span class="state" aria-hidden="true">Paused</span>

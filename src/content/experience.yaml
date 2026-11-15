@@ -1,4 +1,4 @@
-# Roles and education, newest first by `start`. Dates: YYYY-MM (or YYYY); "present" for an ongoing role.
+# Compact timeline: one line per entry (the Work cards carry the detail). Roles and education, newest first by `start`. Dates: YYYY-MM (or YYYY); "present" for an ongoing role.
 # Sources: Luke (2026-11-09) for EGI and the Imperial end date; the CV for the rest.
 - id: egi
   kind: role
@@ -7,17 +7,13 @@
   orgUrl: "https://www.egi.ltd"
   start: "2026-03"
   end: present
-  summary: Robot learning for factory automation (assembly, packing, unpacking). Lead on offline and online reinforcement learning, including fine-tuning VLAs for high-precision tasks; the ROS 2 stack, operator interface and policy deployment on real robots. Machine Learning Research Engineer until September 2026.
-  draft: true
   note: Titles, dates and URL from Luke (2026-11-09, 2026-11-10).
 - id: imperial
   kind: role
-  title: Research Associate (postdoctoral)
+  title: Postdoctoral Research Associate
   org: Imperial College London
   start: "2025-01"
   end: "2026-03"
-  summary: DARPA project on remote, camera-only monitoring of robotic systems such as cranes and quadrupeds; world models for anomaly detection (first author, CoRL 2026). Reinforcement learning for an underactuated crane, from simulation to the real system (co-author, IROS). Led a three-person team.
-  draft: true
   note: Fixed-term one-year post-doc (Luke). "Led a three-person team" from the CV.
 - id: phd
   kind: education
@@ -26,14 +22,6 @@
   orgUrl: "https://rpl-as-ucl.github.io/"
   start: "2020-10"
   end: "2024-10"
-  summary: Reinforcement learning for robotic grasping, deployed on a 7-DOF arm with a custom gripper; three first-author papers.
-- id: pgta
-  kind: role
-  title: Postgraduate Teaching Assistant
-  org: University College London
-  start: "2021-01"
-  end: "2024-01"
-  summary: Taught on robotics MSc modules.
 - id: jde
   kind: role
   title: Research and Development Intern
@@ -46,5 +34,5 @@
   org: University of Bath
   start: "2015"
   end: "2020"
-  summary: Dissertation on flexure couplings for precision control of robotic mechanisms.
-  note: CV names the dissertation "Computational mathematical modelling of flexure robots"; the 2024 site "Flexure Couplings for Precision Control of Automated Robotic Mechanisms". Luke to pick.
+  summary: "Dissertation: computational mathematical modelling of flexure robots."
+  note: Official title "Flexure Couplings for Precision Control of Automated Robotic Mechanisms"; Luke prefers the CV summary title (2026-11-15).
