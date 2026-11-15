@@ -6,7 +6,7 @@
   orgUrl: "https://www.egi.ltd"
   start: "2026-03"
   end: present
-  summary: Leading reinforcement learning research and deployment, focused on high-precision manipulation tasks. Research includes offline to online reinforcement learning, fine-tuning VLAs, and sim-to-real transfer.
+  summary: "Leading reinforcement learning research and deployment, focused on high-precision manipulation tasks. Research spans offline-to-online reinforcement learning, fine-tuning VLAs, and sim-to-real transfer."
   note: No clip until EGI approves footage (candidates in outputs/egi_private/; tested on branch egi-preview). Machine Learning Research Engineer until September 2026.
 - id: imperial
   order: 2
@@ -15,7 +15,7 @@
   orgUrl: "https://www.imperial.ac.uk/adaptive-intelligent-robotics/"
   start: "2025-01"
   end: "2026-03"
-  summary: World models and sim-to-real policy transfer for infrastructure; first-author CoRL 2026 paper.
+  summary: "Led the machine learning research team on a DARPA project, working on physics-informed world models, sim-to-real transfer, and reinforcement learning control of underactuated robots. First-author CoRL 2026 paper; co-author at IROS 2026."
   href: "#pub-aware2026"
   clip:
     video: /media/aware_summary_640.mp4
@@ -28,7 +28,7 @@
   orgUrl: "https://rpl-as-ucl.github.io/"
   start: "2020-10"
   end: "2024-10"
-  summary: Reinforcement learning for autonomous grocery grasping; 95.8% success on 42 real grocery items, +18% on Ocado's bin-picking benchmark, and three first-author papers.
+  summary: "Developed reinforcement learning for autonomous grocery grasping with a caging-inspired gripper: 95.8% success on 42 real grocery items and an 18% improvement on Ocado's bin-picking benchmark. Three first-author papers (T-MECH 2024, IROS 2021 and 2024)."
   href: "#pub-thesis2024"
   clip:
     video: /media/phd_binpick_10x_640.mp4
