@@ -111,7 +111,7 @@
     - { label: code, url: "https://github.com/lukebeddow/gripper-ros" }
     - { label: comparison with related work, url: "/docs/comparison_vs_related_work.pdf" }
   clip:
-    video: /media/phd_binpick_800.mp4
-    poster: /media/phd_binpick_800_poster.jpg
+    video: /media/phd_binpick_10x_800.mp4
+    poster: /media/phd_binpick_10x_800_poster.jpg
     alt: The gripper picking limes from a bin, sped up five times.
   note: 11% is a median (Luke, 2026-11-09). Title to check against the deposited thesis; add a thesis link if there is one.

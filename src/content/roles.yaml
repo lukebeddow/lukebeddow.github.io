@@ -31,8 +31,8 @@
   summary: Reinforcement learning for autonomous grocery grasping; 95.8% success on 42 real grocery items, +18% on Ocado's bin-picking benchmark, and three first-author papers.
   href: "#pub-thesis2024"
   clip:
-    video: /media/phd_binpick_800.mp4
-    poster: /media/phd_binpick_800_poster.jpg
-    alt: The robot picking bags of limes from a green crate into a blue one, with the overhead camera's segmentation shown between picks, at five times speed.
+    video: /media/phd_binpick_10x_800.mp4
+    poster: /media/phd_binpick_10x_800_poster.jpg
+    alt: The robot emptying a green crate of limes into a blue one at ten times speed, with the overhead camera's segmentation shown between picks.
     aspect: "1500 / 1080"
-  note: First 30 s of Luke's 1080p bin-picking video (full run is 58 s).
+  note: Whole run from Luke's normal-speed 1080p video, robot footage at 10x with our label, camera inserts at 2.5x (scripts/media/phd_speedup.sh).
