@@ -62,7 +62,7 @@ const roles = defineCollection({
     orgUrl: z.url().optional(),
     start: yearMonth,
     end: z.union([yearMonth, z.literal('present')]),
-    summary: z.string().max(200), // one sentence under the clip
+    summary: z.string().max(320), // one or two sentences beside the clip
     href: z.string().optional(), // where the title points (e.g. the paper on this page)
     clip: clip.optional(),
     ...flags,

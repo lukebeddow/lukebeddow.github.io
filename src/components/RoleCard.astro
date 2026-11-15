@@ -1,6 +1,6 @@
 ---
-// A "Work" card: the role's clip at full column width, then title, organisation, dates and one sentence.
-// Without a clip (e.g. footage awaiting approval) only the text is shown.
+// A research role: title, organisation, dates and a short summary, with the role's clip beside it.
+// Text comes first so it is clear what the clip shows; without a clip the text spans the row.
 import Clip from './Clip.astro';
 import { REVIEW, dateSpan } from '../lib/site';
 
@@ -19,11 +19,13 @@ interface Props {
 const r = Astro.props;
 ---
 <article class:list={['role', { 'no-clip': !r.clip, draft: REVIEW && r.draft }]} id={`role-${r.id}`}>
+  <div class="role-text">
+    <h3>{r.href ? <a href={r.href}>{r.title}</a> : r.title}</h3>
+    <p class="org">
+      {r.orgUrl ? <a href={r.orgUrl} target="_blank" rel="noopener">{r.org}</a> : r.org}
+      <span class="dates">{dateSpan(r.start, r.end)}</span>
+    </p>
+    <p class="summary">{r.summary}</p>
+  </div>
   {r.clip && <Clip clip={r.clip} natural />}
-  <h3>{r.href ? <a href={r.href}>{r.title}</a> : r.title}</h3>
-  <p class="org">
-    {r.orgUrl ? <a href={r.orgUrl} target="_blank" rel="noopener">{r.org}</a> : r.org}
-    <span class="dates">{dateSpan(r.start, r.end)}</span>
-  </p>
-  <p class="summary">{r.summary}</p>
 </article>

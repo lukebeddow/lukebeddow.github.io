@@ -1,4 +1,4 @@
-# The "Research" section: one full-width clip per role with a one-sentence summary (Luke, 2026-11-15).
+# The "Research roles" section: one full-width clip per role with a one-sentence summary (Luke, 2026-11-15).
 - id: egi
   order: 1
   title: Founding Machine Learning Research Engineer
@@ -6,7 +6,7 @@
   orgUrl: "https://www.egi.ltd"
   start: "2026-03"
   end: present
-  summary: Leading reinforcement learning research and deployment, focused on high-precision manipulation tasks.
+  summary: Leading reinforcement learning research and deployment, focused on high-precision manipulation tasks. Research includes offline to online reinforcement learning, fine-tuning VLAs, and sim-to-real transfer.
   note: No clip until EGI approves footage (candidates in outputs/egi_private/; tested on branch egi-preview). Machine Learning Research Engineer until September 2026.
 - id: imperial
   order: 2
@@ -18,8 +18,8 @@
   summary: World models and sim-to-real policy transfer for infrastructure; first-author CoRL 2026 paper.
   href: "#pub-aware2026"
   clip:
-    video: /media/aware_summary_1280.mp4
-    poster: /media/aware_summary_1280_poster.jpg
+    video: /media/aware_summary_640.mp4
+    poster: /media/aware_summary_640_poster.jpg
     alt: "AWARE: the title over a robotic crane, camera tracking of the crane, a simulated world model with a prediction-error chart, and a weakened motor detected as a warning light turns red."
 - id: phd
   order: 3
@@ -31,8 +31,8 @@
   summary: Reinforcement learning for autonomous grocery grasping; 95.8% success on 42 real grocery items, +18% on Ocado's bin-picking benchmark, and three first-author papers.
   href: "#pub-thesis2024"
   clip:
-    video: /media/phd_binpick_10x_800.mp4
-    poster: /media/phd_binpick_10x_800_poster.jpg
+    video: /media/phd_binpick_10x_640.mp4
+    poster: /media/phd_binpick_10x_640_poster.jpg
     alt: The robot emptying a green crate of limes into a blue one at ten times speed, with the overhead camera's segmentation shown between picks.
     aspect: "1500 / 1080"
   note: Whole run from Luke's normal-speed 1080p video, robot footage at 10x with our label, camera inserts at 2.5x (scripts/media/phd_speedup.sh).
