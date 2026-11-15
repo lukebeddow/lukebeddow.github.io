@@ -4,3 +4,6 @@ dist/
 .DS_Store
 *.log
 .env*
+
+# Media awaiting permission to publish (e.g. EGI videos): never committed, never deployed.
+public/media/unreleased/
