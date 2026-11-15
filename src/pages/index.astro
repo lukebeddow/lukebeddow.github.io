@@ -22,7 +22,7 @@ const now = experience.find((e) => e.data.kind === 'role' && e.data.end === 'pre
 const title = `${profile.name}: reinforcement learning for real-world robotics`;
 const sections = [
   ['about', 'About'],
-  ['work', 'Work'],
+  ['research', 'Research'],
   ['publications', 'Publications'],
   ['projects', 'Projects'],
   ['experience', 'Experience and education'],
@@ -57,8 +57,8 @@ const sections = [
         ))}
       </section>
 
-      <section id="work">
-        <h2>Work</h2>
+      <section id="research">
+        <h2>Research</h2>
         {roles.map(({ id, data: r }) => (
           <RoleCard id={id} title={r.title} org={r.org} orgUrl={r.orgUrl} start={r.start} end={r.end}
             summary={r.summary} href={r.href} clip={r.clip} draft={r.draft} />
