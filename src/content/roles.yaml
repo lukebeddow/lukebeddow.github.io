@@ -7,7 +7,11 @@
   start: "2026-03"
   end: present
   summary: "Leading reinforcement learning research and deployment, focused on high-precision manipulation tasks. Research spans offline-to-online reinforcement learning, fine-tuning VLAs, and sim-to-real transfer."
-  note: No clip until EGI approves footage (candidates in outputs/egi_private/; tested on branch egi-preview). Machine Learning Research Engineer until September 2026.
+  clip:
+    video: /media/egi_ziptie_640.mp4
+    poster: /media/egi_ziptie_640_poster.jpg
+    alt: Robot arms in front of a green screen threading and tightening a zip tie autonomously, at twice speed.
+  note: Zip-tie clip from EGI's medley video (1.00-15.44 s), approved for the site by EGI (Luke, 2026-11-16). Machine Learning Research Engineer until September 2026.
 - id: imperial
   order: 2
   title: Postdoctoral Research Associate
